@@ -1,0 +1,262 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero-Section</title>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Moonet&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Seasons&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Montserrat:wght@100;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  <link rel="stylesheet" href="../Styles/Hero.css">
+
+</head>
+<body>
+  <script>
+    document.getElementById("hero-call-us").addEventListener("click", ()=>{
+      console.log("clicked?");
+    });
+  </script>
+  <div class="honeycomb-loader-wrapper" id="loaderWrapper">
+    <div class="honeycomb">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+    <div class="Hero-container" id="heroSection">
+      <img class="video-placeholder" src="../Resource/video-placeholder.jpeg" alt="Video Placeholder" loading="lazy" />
+      <video id="heroVideo" class="Video-background" preload="none" autoplay muted loop playsinline>
+        <!-- The <source> tag will be added dynamically -->
+      </video>
+
+          <div class="logo">
+            <img src="../Resource/shilhaandaralogo.png" alt="Logo" class="Logo-Img-HEro" loading="lazy"/>
+            <div class="Hero-Resort-names-Logo">
+              <p id="resortName" class="ResortName-logo">Shilhaandara</p>
+              <img id="logoImg" src="../Resource/rashi-logo.avif" alt="rashi-logo" class="Logo-Img-HEro alternating-logo" onclick="rashitriggerfunction()" loading="lazy"/>
+            </div>
+          </div>
+
+          <div class="menuicon-wrapper">
+            <div class="hero-phone-number">
+              <a onclick="clarityPhoneEvent()" href="tel:+918494949186">
+                <span class="hero-phone-number-span">84 9494 9186</span>
+              </a>
+            </div>
+
+            <div class="menuicon">
+              <label class="Hero-Hamburger-logo-hamburger" >
+                <input type="checkbox" id="menu-toggle">
+                <svg viewBox="0 0 32 32">
+                  <path class="Hero-Hamburger-logo-line Hero-Hamburger-logo-line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                  <path class="Hero-Hamburger-logo-line" d="M7 16 27 16"></path>
+                </svg>
+              </label> 
+            </div>
+          </div>
+      
+          <div id="menu" class="menu">
+            <ul>
+              <li><a href="#heroSection">Home</a></li>
+              <li><a href="dayout.html" style="color: #edd706; font-weight: bold;">Day Outing</a></li>
+              <li><a href="#packages">Packages</a></li>
+              <li><a href="#accomodation">Rooms</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        <!--  Popup -->
+         <!-- <div id="weekday-popup" class="popup-overlay">
+          <div class="popup-box">
+            <button class="close-btn" onclick="closePopup()">&times;</button>
+            <h2>Willing to stay on a weekday?</h2>
+            <p class="sub-text">Get the most luxurious available rooms,<br> holiday access for the year,<br> and the best discount deals !</p>
+            <p class="highlight">All at the same cost.</p>
+            <a href="javascript:void(0);" onclick="redirectToCard()" class="btn-book">Book Now</a>
+          </div>
+        </div> -->
+          <div id="offer-popup" class="popup-overlay">
+          <div class="popup-box">
+            <button class="close-btn" onclick="closeP()">&times;</button>
+
+            <h2>🎉 Flat 20% OFF!</h2>
+
+            <p class="sub-text">
+              Use coupon code
+            </p>
+
+            <div class="coupon-wrapper">
+              <span id="couponCode">SAVE20NOW</span>
+              <span class="copy-icon" onclick="copyCoupon()" title="Copy code">
+                📋
+              </span>
+            </div>
+
+            <p class="copy-msg" id="copyMsg">Click icon to copy</p>
+
+            <p class="highlight">
+              Limited-time weekday & seasonal offer!
+            </p>
+
+            <div class="popup-actions">
+              <a href="javascript:void(0);" onclick="redirectToDayout()" class="btn-offer dayout">
+                Book Day Out
+              </a>
+
+              <a href="javascript:void(0);" onclick="redirectToRooms()" class="btn-offer room">
+                Book Rooms
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+          <div style="display: flex; flex-direction: column;" >
+              <!-- <marquee behavior="scroll" direction="left" scrollamount="6" 
+                style="width:100%; color:#f60000; font-weight:bold; padding:12px; font-size:25px;">
+                ⚠️ Beware of Scammers! Do not pay to any QR code, personal numbers. 
+                Kindly pay only through our official website (Shilhaandara.com) or directly at the property. 
+                Enjoy an additional 10% off when you pay at the property! ✅
+              </marquee> -->
+            <div class="inner-div">
+            <h1 class="Hero-Center-Content-H1">Escape to Paradise: Discover Luxury Amidst Nature</h1>
+            <p class="Hero-Center-Content-p">Savor exceptional hospitality, breathtaking landscapes, and timeless memories at our premier resorts.</p>
+            
+            <div class="hero-input-container">
+
+              <div class="hero-input-people">
+                <label for="people">No Of People</label>
+                <div class="hero-input-counter">
+                  <button id="decrement">-</button>
+                  <input type="text" id="people" value="1" min="1" />
+                  <button id="increment">+</button>
+                </div>
+              </div>
+              <div class="hero-input-toggle">
+                <label for="day-out-toggle">Day Out</label>
+                <label class="hero-input-switch">
+                  <input type="checkbox" id="day-out-toggle" onchange="updateBookingUrl()"/>
+                  <span class="hero-input-slider"></span>
+                </label>
+                <span id="toggle-text" class="Toggle-text-span">Rooms</span>
+              </div>
+              <button class="Hero-Book-Now-btn" onclick="heroBookFunction()">Book Now</button>            
+            </div>
+            </div>
+          </div>
+
+          <div class="hero-enqire-section-wrapper">
+            <div class="hero-enqire-section">
+              <span class="enquire-text">Enquire</span>
+              <div class="hero-enquire-logo-animate" onclick="toggleEnquirySections()">
+                <div class="hero-enquiry-logo">
+                  <img src="../Resource/enquiry.avif" class="Enquire-logo" loading="lazy">
+                </div>
+              </div>
+              <div class="hero-enquiry-sub1 show">
+                <a onclick="clarityPhoneEvent()" href="tel:+918494949186">
+                  <img src="../Resource/telephoneshilla.png" alt="Call us" class="hero-enquiry-telephone" loading="lazy"/>
+                </a>              
+              </div>
+              <div class="hero-enquiry-sub2 show">
+                <a onclick="clarityWaEvent()" href="https://wa.me/919886787039?text=Hi%20Iam%20contacting%20from%20Shilhaandra%20website." target="_blank" rel="noopener noreferrer">
+                  <img src="../Resource/watsappshilla1.png" class="hero-enquiry-whatsapp" alt="WhatsApp" loading="lazy"/>
+                </a>             
+              </div>
+            </div>
+          </div>
+          
+<div class="advertiseSection">
+  <div class="Other-Resorts-container">
+
+    <section class="Herocontainer">
+      <div class="hero-card__container swiper">
+         <div class="hero-card__content">
+            <div class="swiper-wrapper">
+   
+               <article class="hero-card__article swiper-slide">
+                <a href="https://guhantara.com/" style="text-decoration: none;" target="_blank">
+                  <div class="hero-card__data" style="background-image: url('../Resource/guhaantara-poster.avif');background-size: cover;background-position: center;background-repeat: no-repeat;">
+                   <div class="Hero-heading-section">
+                      <img src="../Resource/guhantaralogo.png" class="Hero-Slider-logos"/>
+                      <div class="Hero-Resort-name">Guhantara</div>
+                   </div>
+                   <div class="Hero-location-section">@Bengaluru</div>
+                </div>
+                </a>
+               </article>
+               
+               <article class="hero-card__article swiper-slide">
+                <a href="https://sirinatureroost.com/" style="text-decoration: none;" target="_blank">
+                  <div class="hero-card__data" style="background-image: url('../Resource/siri-poster.avif');background-size: cover;background-position: center;background-repeat: no-repeat;">
+                   <div class="Hero-heading-section">
+                      <img src="../Resource/sirilogo.png" class="Hero-Slider-logos"/>
+                      <div class="Hero-Resort-name Hero-resort-name-extender-1">Siri Nature Roosts</div>
+                   </div>
+                   <div class="Hero-location-section">@Chikmagalur</div>
+                </div>
+                </a>
+               </article>
+               
+               <article class="hero-card__article swiper-slide">
+                <a href="https://jhari.in/" style="text-decoration: none;" target="_blank">
+                  <div class="hero-card__data" style="background-image: url('../Resource/jhari-poster.avif');background-size: cover;background-position: center;background-repeat: no-repeat;">
+                   <div class="Hero-heading-section">
+                      <img src="../Resource/jharilogo.png" class="Hero-Slider-logos"/>
+                      <div class="Hero-Resort-name Hero-resort-name-extender-2">Jhari Eco Stay</div>
+                   </div>
+                   <div class="Hero-location-section">@Chikmagalur</div>
+                </div>
+                </a>
+               </article>
+
+               <article class="hero-card__article swiper-slide" id="staycation-slide">
+                  <div class="hero-card__data" style="background-image: url('../Resource/Rashi_staycation-opulence.avif');background-size: cover;background-position: center;background-repeat: no-repeat;">
+                   <div class="Hero-heading-section">
+                   </div>
+                </div>
+               </article>
+               
+               <article class="hero-card__article swiper-slide">
+                <a href="https://rashiecotourism.com/" style="text-decoration: none;" target="_blank">
+                  <div class="hero-card__data" style="background-color:#B8A884;">
+                   <div class="Hero-resorts-finalSlide">
+                    <img src="../Resource/rashi-logo.avif" class="Hero-resorts-rashi-img"/>
+                    <div class="Hero-resorts-text">Other Resorts Of</div>
+                    <div class="Hero-Rashi-Eco-Tourism-text">Rashi Eco Tourism</div>
+                   </div>
+                </div>
+                </a>
+               </article>
+
+            </div>
+         </div>
+      </div>
+   </section>
+
+<div id="cookieConsent" class="cookie-consent">
+    <p class="cookie-consent-p">Kindly accept these cookies so that we can tailor the best deals for you.</p>
+   <div class="Cookie-buttons-placer"> 
+    <button id="allowCookies" class="cookie-button">Allow</button>
+    <button id="denyCookies" class="cookie-button">Deny</button>
+  </div>
+</div>
+
+  </div>
+</div>
+    </div>
+    <script src="../JSfiles/Hero.js"></script>
+
+</body>
+</html>

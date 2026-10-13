@@ -1,0 +1,415 @@
+.Contact-container{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    min-height: fit-content;
+    padding-left: 8vw;
+    padding-right: 5vw;
+
+    gap: 5%;
+
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+}
+.Contact-subcontainer-1{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.Contact-subcontainer-2{
+    flex: 1;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content:center;
+}
+.Contact-container-topper-text{
+    color: #494747;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+}
+.Contact-header-text{
+    color: #494747;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.Contact-header-text-2{
+    color: #494747;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 550;
+}
+.Contact-header-bottom-text{
+    color: var(--lightt-color);
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    margin-top: 8px;
+}
+
+.Contact-input-container{
+    font-family: "Poppins","sans-serif";
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 85%;
+}
+
+.Contact-input-header{
+    color: #494747;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+
+.Contact-input-textbox {
+    height: 50px;
+    width: 100%;
+    border-radius: 30px;
+    border: solid 2px var(--lightt-color);
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: "Poppins", "sans-serif";
+    font-size: 1rem;
+    appearance: none;  /* Removes default styling in some browsers */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none;
+
+    color: #5e5e5e;
+}
+
+.Contact-input-textbox:focus {
+    border: solid 2px var(--dark-color);
+    outline: none; /* Optional: remove the default outline */
+}
+
+.Contact-input-textbox:focus::after {
+    content: '\2193';  /* Downward arrow */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--dark-color);  /* Color for the arrow when focused */
+}
+
+
+.Contact-submit-button{
+  border-radius: 30px;
+  position: relative;
+  font-weight: 600;
+  font-size: 15px;
+  background-color: var(--dark-color);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Hide the overflow for the moving line */
+}
+.Contact-submit-button:hover{
+    background-color: var(--lightt-color);
+    border: none;
+  }
+.Contact-submit-button:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 70%);
+    animation: glitter 6s linear infinite;
+    z-index: 0;
+    text-decoration: none;
+  }
+
+.loading-popup {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  border: 8px solid #f3f3f3; /* Light gray */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-popup p {
+  color: white;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+
+@media(min-width: 1025px){
+    .Contact-container{
+        margin-top: -2%;
+    }
+
+    .Contact-subcontainer-1{
+        width: 10%;
+    }
+    .Contact-input-textbox{
+        height: 50px;
+    }
+    .Contact-submit-button {
+        font-size: 1.1rem;
+        padding: 10px 25px;
+    }
+}
+/* Responsive Styles */
+@media (max-width: 1024px){
+    .Contact-input-container{
+        width: 87%;
+    }
+    .Contact-input-textbox{
+        height: 45px;
+    }
+    .Contact-submit-button {
+        font-size: 1.1rem;
+        padding: 8px 26px;
+    }
+}
+/* For screens smaller than 1024px (tablets and smaller laptops) */
+@media (max-width: 999px) {
+    .Contact-container {
+        flex-direction: column-reverse;
+        gap: 0; 
+        margin-top: -1%;    
+    }
+    .Contact-subcontainer-1 {
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+        margin-left: -5vw;
+    }
+    .Contact-subcontainer-2 {
+        margin-bottom: 30px;
+        height: auto;
+    }
+    .Contact-input-textbox{
+        height: 45px;
+    }
+    .Contact-submit-button {
+        font-size: 1.1rem;
+        padding: 10px 30px;
+    }
+    .Contact-container{
+        padding-top: 9%;
+        padding-bottom: 9%;
+    }
+}
+
+/* For screens smaller than 768px (large mobiles and small tablets) */
+@media (max-width: 768px) {
+    .Contact-subcontainer-1{
+        width: 100%;
+    }
+    .Contact-header-text {
+        font-size: 2rem;
+    }
+    .Contact-header-text-2 {
+        font-size: 1.8rem;
+    }
+    .Contact-header-bottom-text {
+        font-size: 1.2rem;
+    }
+    .Contact-input-textbox {
+        font-size: 0.9rem;
+    }
+    .Contact-input-textbox{
+        height: 45px;
+    }
+    .Contact-submit-button {
+        font-size: 1.1rem;
+        padding: 10px 30px;
+    }
+}
+
+@media(max-width:720px){
+    .Contact-subcontainer-2{
+        align-items: center;
+        justify-content: center;
+        margin-left: -2.75%;
+    }
+    .Feedback-header-bottom-text{
+        text-align: center;
+    }
+}
+
+/* For screens smaller than 480px (mobiles and flipables) */
+@media (max-width: 480px) {
+    .Contact-header-text {
+        font-size: 1.8rem;
+    }
+    .Contact-header-text-2 {
+        font-size: 1.5rem;
+    }
+    .Contact-header-bottom-text {
+        font-size: 1rem;
+    }
+    .Contact-input-container {
+        font-size: 1.2rem;
+    }
+    .Contact-input-textbox {
+        font-size: 0.9rem;
+        padding-left: 20px;
+    }
+    .Contact-submit-button {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+}
+
+@media(min-width:1000px){
+    .Contact-input-textbox{
+        width: 100%;
+    }
+}
+
+.Contact-details-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.Contact-logo-holder{
+    height: 50px;
+    width: 50px;
+}
+
+@media(max-width:1024px){
+    .Contact-logo-holder{
+        height: 48px;
+        width: 48px;
+    }
+}
+
+@media(max-width:500px){
+    .Contact-logo-holder{
+        height: 40px;
+        width: 40px;
+    }
+}
+
+.Contact-details-1,
+.Contact-details-2{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins','sans-serif';
+    font-size: 1.3rem;
+    color: #72664D;
+}
+
+.Contact-details-alter{
+    align-items: flex-start;
+}
+@media(max-width:580px){
+    .Contact-details-alter{
+        line-height: 1.3;
+    }
+}
+
+.Contact-details-1 a,
+.Contact-details-2 a{
+    text-decoration: none;
+    font-family: 'Poppins','sans-serif';
+    font-size: 1.15rem;
+    color: #72664D;
+}
+.Contact-details-3{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    font-family: 'Poppins','sans-serif';
+    font-size: 1.3rem;
+    color: #72664D;
+}
+
+.Contact-details-1 a:hover,
+.Contact-details-2 a:hover,
+.Contact-details-3 a:hover{
+    border-bottom: 1px solid var(--dark-color);
+}
+
+@media(max-width:1245px){
+    .Contact-details-1 a,
+    .Contact-details-2 a
+    .Contact-details-3 a{
+        font-size: 1.1rem;
+    }
+}
+
+@media(max-width:500px){
+    .Contact-details-1 a,
+    .Contact-details-2 a
+    .Contact-details-3 a{
+        font-size: 1rem;
+    }
+}
+
+@media(max-width:480px){
+    .Contact-subcontainer-2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+
+        margin-left: -2.75%;
+    }
+}
+
+
+
+  @media(min-width:1950px){
+    .Contact-details-1 a,
+    .Contact-details-2 a
+    .Contact-details-3 a{
+        font-size: 1vw;
+    }
+
+    .Contact-logo-holder{
+        height: 60px;
+        width: 60px;
+    }
+    .Contact-submit-button{
+        font-size: 1vw;
+    }
+    .Contact-input-textbox{
+        height: 4vh;
+        font-size: 0.8vw;
+    }
+  }
+  

@@ -1,0 +1,268 @@
+.pictureComponent-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4%;
+    margin-bottom: 4%;
+
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.picture-container {
+    width: fit-content;
+    background-color: var(--lightt-color);
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    border-radius: 2vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 3%;
+}
+
+
+.pictureComponent-header {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+    font-weight: 600;
+    width: 100%;
+    max-width: 1100px;
+    text-align: left;
+    margin: 0 auto 5px auto;
+    color: #165b9d;
+}
+.picture-sub-1{
+    margin-top: 30px;
+}
+.picture-sub-1,
+.picture-sub-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.picturecomponent-img1,
+.picturecomponent-img2,
+.picturecomponent-img3 {
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.pictureComponent-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+    padding: 20px;
+    align-items: center;
+}
+
+.pictureComponent-sub1 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.pictureComponent-content-text {
+    font-family: 'Poiret One', sans-serif;
+    font-weight: 800;
+    font-size: 2vw;
+    color: var(--dark-color);
+}
+
+.pictureComponent-content svg {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.pictureComponent-logo1 {
+    height: 3vw;
+}
+.picturecomponent-img1,.picturecomponent-img2,.picturecomponent-img3 {
+    transition: opacity 1s ease-in-out; 
+    display: block;
+    width: 100%; /* Ensures proper resizing */
+    height: auto; /* Maintain aspect ratio */
+    background-color: #000; /* Optional: Prevent background visibility */
+}
+
+
+
+.follow-hashtag-button{
+    margin-top: 0%;
+  }
+  .follow-hashtag-button:hover {
+    background-color: var(--dark-color);
+    transform: scale(1.1); /* Makes the button 10% bigger */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+  
+
+    /* .picture-container {
+        max-width: 1500px;
+    } */
+    .picturecomponent-img1 {
+        height: 17vw;
+        width: 23vw;
+    }
+    
+    .picturecomponent-img2 {
+        height: 17vw;
+        width: 18vw;
+    }
+    
+    .picturecomponent-img3 {
+        height: 17vw;
+        width: 28vw;
+    }
+    @media(max-width:1200px){
+        .pictureComponent-content-text {
+            font-size: 30px;
+        }
+    }
+    @media(max-width:1024px){
+        .pictureComponent-content-text {
+            font-size: 25px;
+        }
+    }
+    @media(max-width:840px){
+        .pictureComponent-content-text {
+            font-size: 30px;
+        }
+    }
+
+ @media (max-width: 750px) {
+
+
+    .pictureComponent-header {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .picture-sub-1,
+    .picture-sub-2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .pictureComponent-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .pictureComponent-content-text {
+        font-size: 35px;
+    }
+    .follow-hashtag-button{
+        font-size: 20px;
+        padding: 10px 40px;
+        border-radius: 30px;
+    }
+    .pictureComponent-logo1{
+        height: 40px;
+    }
+ }
+
+
+
+/* Responsive styles for mobile devices */
+@media (max-width: 750px) {
+    .pictureComponent-header {
+        font-size: 28px;
+    }
+
+    .pictureComponent-container {
+        padding: 10px;
+    }
+
+    .picturecomponent-img1,
+    .picturecomponent-img2,
+    .picturecomponent-img3 {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+/* Responsive styles for small mobile devices */
+@media (max-width: 480px) {
+    .picture-container{
+        gap: 5px;
+        border-radius: 3vw;
+        width: 90vw;
+    }
+    
+    .pictureComponent-container{
+        margin-top: 0%;
+    }
+
+    .pictureComponent-header {
+        font-size: 22px;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .picture-sub-1,
+    .picture-sub-2 {
+        gap: 5px;
+    }
+
+    .picturecomponent-img1,
+    .picturecomponent-img2,
+    .picturecomponent-img3 {
+        width: 85vw;
+        height: 200px;
+    }
+
+    .pictureComponent-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+    .pictureComponent-content button {
+        /* width: 180px; */
+        font-size: 12px;
+    }
+    .pictureComponent-logo1{
+        height: 30px;
+    }
+    .pictureComponent-content-text {
+        font-size: 30px;
+    }
+}
+
+@media(min-width:1950px){
+    .picturecomponent-img1{
+        width: 21vw;
+        height: 15vw;
+    }
+    .picturecomponent-img2{
+        width: 15vw;
+        height: 15vw;
+    }
+    .picturecomponent-img3{
+        width: 27vw;
+        height: 15vw;
+    }
+    .follow-hashtag-button{
+        font-size: 1vw;
+        padding: 10px 20px;
+    }
+}

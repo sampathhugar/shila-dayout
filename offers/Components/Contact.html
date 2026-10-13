@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../Styles/Contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="Contact-container" id="contact">
+        <div class="Contact-subcontainer-1">
+            <div class="Contact-input-container">
+                <input type="text" id="name" placeholder="Name" class="Contact-input-textbox">
+            </div>
+            <div class="Contact-input-container">
+                <input type="email" id="email" placeholder="Email" class="Contact-input-textbox">
+            </div>
+            <div class="Contact-input-container">
+                <input type="text" id="number" placeholder="Phone Number" class="Contact-input-textbox">
+            </div>
+            
+            <div class="Contact-input-container">
+                <select id="subject" class="Contact-input-textbox">
+                    <option value="" disabled selected>Select Subject</option>
+                    <option value="rooms">Rooms</option>
+                    <option value="staycation">Rashi Eco Staycation</option>
+                    <option value="packages">Packages</option>
+                    <option value="wedding">Wedding</option>
+                    <option value="conference">Conference</option>
+                    <option value="spa">Spa</option>
+                    <option value="serenity-heaven">Serenity Heaven</option>
+                    <option value="events">Events</option>
+                    <option value="other">Others</option>
+                </select>
+            </div>
+            
+            
+            <div class="Contact-input-container">
+                <input type="text" id="message" placeholder="Message" class="Contact-input-textbox">
+            </div>
+
+            <div class="Contact-submit-button" id="submitButton" type="button">
+                Submit
+            </div>
+        </div>
+
+        <div class="Contact-subcontainer-2">
+            <div class="Feedback-container-topper-text">
+                Contact Us --
+            </div>
+            <div class="Feedback-header-text">
+                Get In Touch
+            </div>
+            <div class="Feedback-header-text-2">
+                With Us Today.
+            </div>
+            <div class="Feedback-header-bottom-text">
+                "We're here to help! Whether you have questions, need more information, or are ready to plan your stay, reach out to us. Your next great escape is just a message away!"            
+            </div>
+
+            <div class="Contact-details-container">
+                <div class="Contact-details-1">
+                    <img src="../Resource/contact-phone-call.avif" alt="" class="Contact-logo-holder" loading="lazy"/>
+                    <div>
+                        <a onclick="clarityPhoneEvent()" href="tel:+918494949186">
+                        +91 8494949186 
+                        </a>
+                    </div>
+                </div>
+                <div class="Contact-details-1">
+                    <img src="../Resource/contact-email.avif" alt="" class="Contact-logo-holder" loading="lazy"/>
+                    <div>
+                        <a href="mailto:mahiti@shilhaandara.com" style="color: inherit; text-decoration: none;">
+                        mahiti@shilhaandara.com
+                        </a>
+                    </div>
+                </div>
+                <div class="Contact-details-1 Contact-details-alter">
+                    <img src="../Resource/gps.png" alt="" class="Contact-logo-holder" loading="lazy"/>
+                    <div>
+                        <a href="https://www.google.com/maps/place/Rashi+Eco+Tourism+Pvt+Ltd./@12.7991379,77.4856088,15.89z/data=!4m10!1m2!2m1!1sRashi+Eco+Tourism+Pvt.+Ltd.+++++++++++++++++++++++++++++Sy.+No.+177+%26+177%2F18,+++++++++++++++++++++++++++++Off+Kanakapura+Main+Road,++++++++++++++++++++++++++++++++Nowkal+Palya,+Bangalore+South+Taluk,+++++++++++++++++++++++++++++Kaggalipura+%E2%80%93+560082,+Karnataka!3m6!1s0x3bae15039fb5e75d:0x6434f088c0ba8479!8m2!3d12.7992727!4d77.4912285!15sCoUCUmFzaGkgRWNvIFRvdXJpc20gUHZ0LiBMdGQuICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTeS4gTm8uIDE3NyAmIDE3Ny8xOCwgICAgICAgICAgICAgICAgICAgICAgICAgICAgIE9mZiBLYW5ha2FwdXJhIE1haW4gUm9hZCwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIE5vd2thbCBQYWx5YSwgQmFuZ2Fsb3JlIFNvdXRoIFRhbHVrLCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgS2FnZ2FsaXB1cmEg4oCTIDU2MDA4MiwgS2FybmF0YWthkgEQY29ycG9yYXRlX29mZmljZeABAA!16s%2Fg%2F11c1x0v7_f?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" style="color: inherit; text-decoration: none;">
+                            <p style="font-weight:bold">Corporate Office :</p>
+                            Rashi Eco Tourism Pvt. Ltd.
+                            Sy. No. 177 & 177/18,
+                            Off Kanakapura Main Road,   
+                            Nowkal Palya, Bangalore South Taluk,
+                            Kaggalipura – 560082, Karnataka
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../JSfiles/Contact.js"></script>
+    
+<!--SHIL Lead submit-->
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-694875190"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-694875190');
+  </script>
+
+
+  <!-- Event snippet for Lead submit conversion page
+  In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+  <script>
+  function gtag_report_conversion(url) {
+  var callback = function () {
+      if (typeof(url) != 'undefined') {
+      window.location = url;
+      }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-694875190/33wyCMDi9JQaELboq8sC',
+      'event_callback': callback
+  });
+  return false;
+  }
+  </script>
+    
+</body>
+</html>

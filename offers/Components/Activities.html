@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities Updated</title>
+    <link rel="stylesheet" href="../Styles/Activities.css">
+
+</head>
+<body>
+    <div class="Activity-Updated-container">
+        <div class="Activity-Updated-container-headings">
+            <div class="Feedback-container-topper-text">
+                What We Give --
+            </div>
+            <div class="Feedback-header-text">
+                Best Activities
+            </div>
+            <div class="Feedback-header-text-2">
+                For You.
+            </div>
+            <div class="Feedback-header-bottom-text">
+            "Discover the Best Activities, Curated Just for You - Adventure, Relaxation, and Everything in Between!"
+        </div>
+    </div>
+    <div class="Activity-Updated-container-content">
+        <div class="Activity-Updated-image-box">
+            <img id="ActivitiesUpdated-image" src="" class="Activity-Updated-image-box-img" alt="Activity Image">
+        </div>
+        <div class="Activity-Updated-activities">
+            <div id="ActivitiesUpdated-buttons" class="Activity-Updated-buttons">
+            </div>
+        </div>
+    </div>
+    <button class="Book-your-day-ou-btn activites-day-out-button" onclick="bookDayOut()">Book Your Day Out</button>
+   </div>
+    <script src="../JSfiles/Activities.js"></script>
+
+<!--Book Day Out Button-->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-694875190"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-694875190');
+    </script>
+
+    <!-- Event snippet for Book Day Out Button conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+    function gtag_report_conversion(url) {
+    var callback = function () {
+        if (typeof(url) != 'undefined') {
+        window.location = url;
+        }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-694875190/KgBLCLH69JQaELboq8sC',
+        'event_callback': callback
+    });
+    return false;
+    }
+    </script>
+
+</body>
+</html>

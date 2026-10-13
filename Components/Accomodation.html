@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== REMIXICONS ===============-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+
+   <!--=============== SWIPER CSS ===============-->
+   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="../Styles/Accomodation.css">
+
+   <title>RAccomodation</title>
+</head>
+<body>
+   <div class="accomodation-overall-section">
+   <section class="accommodations-section" id="accomodation">
+      <div class="Feedback-container-topper-text">
+         What We Serve --
+     </div>
+     <div class="Feedback-header-text">
+      The Accommodations
+     </div>
+     <div class="Feedback-header-text-2">
+      We Provide.
+     </div>
+     <div class="Feedback-header-text-2">
+      Managed by ssv construction.
+     </div>
+     <div class="Feedback-header-bottom-text">
+      "Experience the perfect blend of comfort and luxury – our accommodations are thoughtfully designed 
+      to offer you a relaxing retreat, whether for a day or an extended stay."      
+     </div>
+    </section>
+
+    <section class="acc-container">
+  
+      <div class="acc-left-click-button">
+         <i class="ri-arrow-left-s-line"></i>
+      </div>
+
+      <div class="acc-card__container swiper">
+         <div class="acc-card__content">
+            <div class="swiper-wrapper">
+               <article class="acc-card__article swiper-slide">
+                  <div class="acc-card__data" style="background-image: url('../Resource/soumithre.avif');">
+                     <h3>Soumithre Pool</h3>
+                     <ul>
+                        <li>Private Pool</li>
+                        <li>AC Rooms</li>
+                        <li>Minibar</li>
+                     </ul>
+                     <button class="know-more-btn" data-room="soumithre">Know More</button>
+                  </div>
+               </article>
+
+               <article class="acc-card__article swiper-slide">
+                  <div class="acc-card__data" style="background-image: url('../Resource/standardroom.avif');">
+                     <h3>Soumithre Standard</h3>
+                     <ul>
+                        <li>King-size Bed</li>
+                        <li>AC Rooms</li>
+                        <li>Fast Internet</li>
+                     </ul>
+                     <button class="know-more-btn" data-room="luxurysuite">Know More</button>
+                  </div>
+               </article>
+
+               <article class="acc-card__article swiper-slide">
+                  <div class="acc-card__data" style="background-image: url('../Resource/sowgandhika.avif');background-size: cover;background-position: center;background-repeat: no-repeat;">
+                     <h3>Sougandhika</h3>
+                     <ul>
+                        <li>Private Jacuzzi</li>
+                        <li>Chef's Amenities</li>
+                        <li>AC Rooms</li>
+                     </ul>
+                     <button class="know-more-btn" data-room="sowgandhika">Know More</button>
+               </article>
+
+               <article class="acc-card__article swiper-slide">
+                  <div class="acc-card__data" style="background-image: url('../Resource/SougandhikaExecutive/sougandhikaExecutive1.jpg');background-size: cover;background-position: center;background-repeat: no-repeat;">
+                     <h3>Sougandhika Executive</h3>
+                     <ul>
+                        <li>Chef's Amenities</li>
+                        <li>AC Rooms</li>
+                     </ul>
+                     <button class="know-more-btn" data-room="sowgandhikaexecutive">Know More</button>
+               </article>
+
+               <article class="acc-card__article swiper-slide">
+                  <div class="acc-card__data" style="background-image: url('../Resource/tentstay.avif');">
+                     <h3>Tent Stay</h3>
+                     <ul>
+                        <li>Cozy Tents</li>
+                        <li>Nature View</li>
+                        <li>Campfire Facility</li>
+                     </ul>
+                     <button class="know-more-btn" data-room="tentstay">Know More</button>
+                  </div>
+               </article>
+
+               <article class="acc-card__article swiper-slide">
+                  <div class="acc-card__data" style="background-image: url('../Resource/sourabha/sourabha1.JPG');">
+                     <h3>Sourabha Pool Cottage</h3>
+                     <ul>
+                        <li>Queen-size Bed</li>
+                        <li>AC Rooms</li>
+                        <li>Fast Internet</li>
+                     </ul>
+                     <button class="know-more-btn" data-room="sourabha">Know More</button>
+                  </div>
+               </article>
+
+               <article class="acc-card__article swiper-slide">
+                  <div class="acc-card__data" style="background-image: url('../Resource/chariot/chariot4.avif');">
+                     <h3>Chariot</h3>
+                     <ul>
+                        <li>Queen-size Bed</li>
+                        <li>AC Rooms</li>
+                        <li>Fast Internet</li>
+                     </ul>
+                     <button class="know-more-btn" data-room="chariot">Know More</button>
+                  </div>
+               </article>
+
+               <article class="acc-card__article swiper-slide">
+                  <div class="acc-card__data" style="background-image: url('../Resource/dormitory/dormitory2.avif');">
+                     <h3>Dormitory</h3>
+                     <ul>
+                        <li>Welcome Drink</li>
+                        <li>AC Rooms</li>
+                        <li>Fast Internet</li>
+                     </ul>
+                     <button class="know-more-btn" data-room="dormitory">Know More</button>
+                  </div>
+               </article>
+
+            </div>
+         </div>
+      </div>
+      
+      
+      <div class="acc-right-click-button">
+         <i class="ri-arrow-right-s-line"></i>
+      </div>
+      
+   </section>
+   
+   <div class="accomodations-button-section">
+      <button class="Book-your-day-ou-btn" onclick="showPricePopup()">Book Your Stay</button>
+   </div>
+</div>
+   
+   <!--===== Price Details ======-->
+   <div id="price-popup" class="pricepopup hidden">
+      <div class="pricepopup-content">
+        <span class="Package-close-btn" onclick="hidePricePopup()">&times;</span>
+        <h2 class="pricepopup-heading">Room Tariff</h2>
+        <table>
+         <thead>
+           <tr  style="background-color: #dcc084;">
+             <th>Accommodation</th>
+             <th>Details</th>
+             <th>EP (Room Only)</th>
+             <th>CP (Breakfast included)</th>
+             <th>AP (All meals included)</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr style="background-color: #f0e3c4;">
+             <td>Soumithre</td>
+             <td>Standard Room</td>
+             <td>6000</td>
+             <td>6500</td>
+             <td>8500</td>
+           </tr>
+           <tr style="background-color:white;">
+             <td>Soumithre</td>
+             <td>Pool Room</td>
+             <td>9000</td>
+             <td>9500</td>
+             <td>11500</td>
+           </tr>
+           <tr style="background-color: #f0e3c4;">
+            <td>Sougandika</td>
+            <td>Executive</td>
+            <td>7000</td>
+            <td>7500</td>
+            <td>9500</td>
+           </tr>
+           <tr style="background-color: #f0e3c4;">
+             <td>Sougandika</td>
+             <td>Jacuzzi Room</td>
+             <td>8000</td>
+             <td>8500</td>
+             <td>10500</td>
+           </tr>
+           <tr style="background-color: #f0e3c4;">
+             <td>Sourabha</td>
+             <td>Pool Cottage</td>
+             <td>11000</td>
+             <td>11500</td>
+             <td>13500</td>
+           </tr>
+           <tr style="background-color:white;">
+             <td>Ratha Nivas</td>
+             <td>The Chariot</td>
+             <td>4000</td>
+             <td>4500</td>
+             <td>6500</td>
+           </tr>
+           <tr style="background-color: #f0e3c4;">
+             <td colspan="2">Extra Occupancy (Kids 6-12 yrs)</td>
+             <td>1100</td>
+             <td>1250</td>
+             <td>1950</td>
+           </tr>
+           <tr style="background-color:white;">
+             <td colspan="2">Extra Occupancy (Adult)</td>
+             <td>1500</td>
+             <td>1750</td>
+             <td>2750</td>
+           </tr>
+           <tr style="background-color: #f0e3c4;">
+             <td colspan="5" class="price-popup-table-bottom">
+               * Taxes are applicable.<br/> 
+               * Weekend rates are applicable for any holiday.<br/>
+               * It is Complimentary for Children between 0 and 5 years of age. Adult charges
+               are considered for Children above 12 years of age.
+            </td>
+           </tr>
+         </tbody>
+       </table>
+       
+
+        <div class="price-popup-buttons-section">
+         <button class="Book-your-day-ou-btn" onclick="bookStay()">Book Your Stay</button>
+         <a href="https://putthari.com/Uploads/Brochure.pdf" target="_blank">
+         <button class="Book-your-day-ou-btn">Download PDF</button>
+         </a>
+        </div>
+
+        <div class="price-popup-below-content-container">
+        <div class="price-popup-bottom-desription">
+         <p><strong>• Indoor games:</strong> Table Tennis, Carrom, Chess, Dart, Foosball, Pool Table.</p>
+         <p><strong>• Outdoor games:</strong> Cricket, Basketball, Football, Throwball, Badminton, Tug of war, Bicycle, Volleyball, Human Foosball.</p>
+         <p><strong>• Kid's Activities:</strong> Play Area and Swimming Pool.</p>
+        </div>
+        
+
+        <div class="price-popup-terms-section">
+         <h3>Terms and Conditions:</h3>
+         <div class="price-popup-terms-points">
+            <p>• No exclusivity is assured as there may be other guests availing the same facility at the same time.</p>
+            <p>• Nylon cloths are mandatory for Swimming pool usage.</p>
+            <p>• Payments should be made in advance before the date of the event.</p>
+            <p>• Mist dance with the DJ is for 30 minutes and at selective times only.</p>
+            <p>• Kindly confirm the date and number of people before 48hrs.</p>
+         </div>
+        </div>
+
+        <div class="price-popup-cancellation-section">
+         <h3>Cancellation Policy:</h3>
+         <div class="price-popup-terms-points">
+            <p>• Full refund for cancellation only if intimation reaches the Company in writing 30 days before check-in.</p>
+            <p>• 25% retention for cancellation 15 days before check-in.</p>
+            <p>• 50% retention for cancellation 7 days before check-in.</p>
+            <p>• Full retention for cancellation within 07 days of check-in.</p>
+            <p>• In the case of a no-show / late check-in / early check-out, there will be NO REFUND.</p>
+            <p>• Any cancellation for the confirmed booking will have processing fees irrespective of the date of cancellation. Please note, the refund process may take 15 -20 working days.</p>          
+         </div>
+        </div>
+
+        <div class="price-popup-footer">
+         <div>
+            <h3>Mode of Payment:</h3>
+            Cash, Online payment, Credit / Debit cards, cheque, or DD in favor of “M/s RASHI ECO TOURISM PVT LTD”.
+         </div>
+         <div>
+            <h3>Please Note:</h3>
+            In case the payment mode is bill to company, we need the purchase order copy to be received one week before the date of the event.
+         </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+
+
+
+   <!--=============== Pop-Up ===============-->
+   <div class="PopUpContainer-wrapper" style="display: none;">
+      <div class="PopUpContainer-container">
+         <div class="PopUpContainer-Content">
+             <button class="close-button">x</button>
+              <h1 class="PopUpContainer-Content-h1">Room Title</h1>
+              <p class="PopUpContainer-Content-p">Room description here...</p>
+              <div class="PopUpContainer-logos">
+                 <div class="PopUpContainer-logo">
+                    <div class="inner-logo" style="background-image: url('path/to/image.avif');" loading="lazy"></div>
+                  </div>
+               </div>
+              <div class="key-features">
+                  <h2 class="PopUpContainer-Content">KEY FEATURES</h2>
+                  <div class="features-list">
+                      <ul>
+                          <li>Feature 1</li>
+                          <li>Feature 2</li>
+                          <li>Feature 3</li>
+                          <li>Feature 4</li>
+                          <li>Feature 5</li>
+                          <li>Feature 6</li>
+                      </ul>
+                      <ul>
+                          <li>Feature 7</li>
+                          <li>Feature 8</li>
+                          <li>Feature 9</li>
+                          <li>Feature 10</li>
+                          <li>Feature 11</li>
+                          <li>Feature 12</li>
+                      </ul>
+                  </div>
+              </div>
+              <button class="Book-your-day-ou-btn pop-up-button" onclick="bookStay()">Book Your Stay</button>
+          </div>
+          <div class="PopUpContainer-Collage">
+              <div class="PopUpContainer-Collage-Colomn1">
+                  <div class="PopUpContainer-Collage-Colomn1-img1" onclick="enlargeImage(this)" loading="lazy"></div>
+                  <div class="PopUpContainer-Collage-Colomn1-img2" onclick="enlargeImage(this)" loading="lazy"></div>
+              </div>
+              <div class="PopUpContainer-Collage-Colomn2">
+                  <div class="PopUpContainer-Collage-Colomn2-img1" onclick="enlargeImage(this)" loading="lazy"></div>
+                  <div class="PopUpContainer-Collage-Colomn2-img2" onclick="enlargeImage(this)" loading="lazy"></div>
+              </div>
+              <div class="PopUpContainer-Collage-Colomn3">
+                  <div class="PopUpContainer-Collage-Colomn3-img1" onclick="enlargeImage(this)" loading="lazy"></div>
+                  <div class="PopUpContainer-Collage-Colomn3-img2" onclick="enlargeImage(this)" loading="lazy"></div>
+                  <div class="PopUpContainer-Collage-Colomn3-img3" onclick="enlargeImage(this)" loading="lazy"></div>
+              </div>
+          </div>
+
+          <div class="pop-swiper swiper">
+            <div class="pop-card__content">
+               <div class="swiper-wrapper pop-wrapper">
+                  <article class="acc-card__article swiper-slide pop-slide" >
+                     <div class="acc-card__data pop-swiper-img" style="background-image: url('../Resource/soumithre.avif');background-size: cover;background-position: center;background-repeat: no-repeat;"  onclick="enlargeImage(this)" loading="lazy">
+                     </div>
+                  </article>
+               </div>
+            </div>
+         </div>
+         
+      </div>
+  </div>
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+   <img id="lightbox-img" src="" alt="Enlarged Image" loading="lazy"/>
+ </div>
+  
+   
+   <!--=============== SWIPER JS ===============-->
+   <script src="../JSfiles/swiper-bundle.min.js"></script>
+
+   <!--=============== MAIN JS ===============-->
+   <script src="../JSfiles/index.js"></script>
+   <script src="../JSfiles/Accomodation.js"></script>
+</body>
+</html>

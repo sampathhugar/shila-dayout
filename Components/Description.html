@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shilhaandara Description Box</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    .description-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-bottom: 4.5%;
+    }
+
+    .description-box {
+      font-family: 'Quicksand', sans-serif;
+
+      font-weight: 500;
+      background-color: #2c2f41; /* Dark background similar to the image */
+      color: white; /* Text color */
+      border-radius: 20px; /* Rounded corners */
+      padding: 20px 40px; /* Padding: top/bottom 20px, left/right 40px */
+      font-size: 1.2vw; /* Text size */
+      line-height: 1.8; /* Line spacing for better readability */
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+      text-align: center; /* Center the text inside */
+    }
+
+    @media(max-width:1245px){
+      .description-box{
+        font-size: 1.05rem;
+      }
+    }
+    @media(max-width:1100px){
+      .description-box{
+        font-size: 1.08rem;
+        padding: 20px 20px;
+      }
+    }
+    @media(max-width:500px){
+      .description-box{
+        font-size: 1rem;
+        /* padding: 20px 20px; */
+      }
+      .description-container{
+        padding: 20px;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+    @media(min-width:1950px){
+      .description-box{
+        font-size: 1.4vw;
+        margin-bottom: -1%;
+        min-width: 70vw;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div class="description-container" id="about">
+  <div class="description-box">
+    <p>
+      Shilhaandara represents the great outdoors, where time moves at its own pace, and rugged natural granite rock formations of captivating beauty line the landscape as far as eyes can see. 
+      Opulence, architecture, and unending access to the environment confluence together for wary travelers and adventure-seekers looking to escape a monotone life. Shilhaandara welcomes thrill-seekers and families with open arms, offering a quiet retreat for couples and an energetic getaway for thrill-seekers. 
+      Shilhaandara is for the true-seeker in you because you only truly understand yourself when you experience a life of high adventure.
+    </p>
+  </div>
+</div>
+
+</body>
+</html>

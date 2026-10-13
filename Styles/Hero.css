@@ -1,0 +1,2173 @@
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../Font/Quicksand/Quicksand-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Fullscreen Loader Styles */
+.honeycomb-loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  backdrop-filter: blur(2.5px); /* Glass effect */
+  -webkit-backdrop-filter: blur(2.5px); /* Safari support */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000; /* Ensure it overlays everything */
+  transition: opacity 0.5s ease; /* Smooth transition when hiding */
+}
+.outer-div{
+  display: flex;
+  flex-direction: column;
+}
+.inner-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.marque{
+  width: 100%;
+  color: red;
+  font-weight: bold;
+  padding: 12px;
+  font-size: 23px;
+}
+
+.honeycomb-loader-wrapper.hidden {
+  opacity: 0;
+  pointer-events: none; /* Prevent interactions */
+}
+
+.honeycomb {
+  height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.honeycomb div {
+  -webkit-animation: honeycomb 2.1s infinite backwards;
+  animation: honeycomb 2.1s infinite backwards;
+  background: var(--lightt-color);
+  height: 12px;
+  margin-top: 6px;
+  position: absolute;
+  width: 24px;
+}
+
+.honeycomb div:after, .honeycomb div:before {
+  content: '';
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.honeycomb div:after {
+  top: -6px;
+  border-bottom: 6px solid var(--lightt-color);
+}
+
+.honeycomb div:before {
+  bottom: -6px;
+  border-top: 6px solid var(--lightt-color);
+}
+
+.honeycomb div:nth-child(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  left: -28px;
+  top: 0;
+}
+
+.honeycomb div:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+  left: -14px;
+  top: 22px;
+}
+
+.honeycomb div:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+  left: 14px;
+  top: 22px;
+}
+
+.honeycomb div:nth-child(4) {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  left: 28px;
+  top: 0;
+}
+
+.honeycomb div:nth-child(5) {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+  left: 14px;
+  top: -22px;
+}
+
+.honeycomb div:nth-child(6) {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  left: -14px;
+  top: -22px;
+}
+
+.honeycomb div:nth-child(7) {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  left: 0;
+  top: 0;
+}
+
+.cookie-consent {
+  position: fixed;
+  width: 30vw;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--dark-color);
+   /* color:var(--lightt-color); */
+  padding: 1vw 3vw;
+  border-radius: 1vw;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1vw;
+  border: 0.1vw solid var(--lightt-color);
+}
+.cookie-consent-p{
+  font-family: 'Quicksand';
+  font-size: 1.2vw;
+  color: #fffeef;
+  text-align: center;
+}
+.Cookie-buttons-placer{
+  display: flex;
+  gap: 0.5vw;
+}
+
+.cookie-button {
+  /* margin: 0 10px; */
+  padding: 0.9vw 2vw;
+  border: none;
+  font-size: 1vw;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#allowCookies {
+  background-color: var(--lightt-color);
+  color: white;
+}
+
+#allowCookies:hover {
+  background-color: var(--lightt-color);
+}
+
+#denyCookies {
+  background-color: #fffeef;
+}
+
+#denyCookies:hover {
+  background-color: #bfbfbf;
+}
+
+html, body {
+  overflow: auto; /* Retains scrolling functionality */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  scrollbar-width: none; /* For Firefox */
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling globally */
+}
+
+.Hero-container{
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      /* background-color: aqua; */
+}
+.video-placeholder {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  z-index: -1;
+}
+.Video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  pointer-events: none;
+  text-decoration: none;
+}
+.Hero-Center-Content{
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.Hero-Center-Content-H1 {
+  font-family: 'Poiret One', sans-serif;
+  width: 90%; /* Adjusts to fit dynamically */
+  max-width: 900px; /* Restricts maximum width */
+  font-size: 4rem;
+  font-weight: 50;
+  color: white;
+  text-align: center;
+  margin: 0 auto; /* Centers the text */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow effect */
+}
+
+.Hero-Center-Content-p {
+  padding-left: 4%;
+  padding-right: 4%;
+  text-align: center;
+  color: rgb(212, 212, 212);
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin: 10px auto; /* Adds spacing */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Adds shadow effect */
+}
+.hero-input-container {
+  font-family: 'Montserrat';
+  padding: 0.3vw 0;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* gap: 20px; */
+  border-radius: 60px;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Soft shadow for depth */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-input-container label {
+  margin-right: 20px;
+  font-size: 17px;
+  font-weight: 600;
+}
+/* .hero-input-people{
+  border-left: 1px solid rgb(157, 157, 157);
+  border-right: 1px solid rgb(157, 157, 157);
+} */
+ .hero-input-people{
+  display: none;
+ }
+
+.hero-input-date,
+.hero-input-toggle {
+  color: white;
+  display: flex;
+  padding: 10px 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Smooth fade-in and fade-out animation */
+#resortName,
+#logoImg,
+.Logo-Img-HEro {
+  transition: opacity 0.5s ease-in-out; /* Smooth opacity change */
+  opacity: 0; /* Default hidden state */
+  display: none; /* Hidden by default */
+}
+
+#resortName[style*="opacity: 1"],
+#logoImg[style*="opacity: 1"],
+.Logo-Img-HEro[style*="opacity: 1"] {
+  display: block; /* Show when opacity is 1 */
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+.hero-input-date input {
+  font-family: 'Montserrat';
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  border-bottom: 1px solid rgb(157, 157, 157);
+  padding: 10px;
+  width: 200px;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-input-counter {
+  display: flex;
+  align-items: center;
+}
+
+.hero-input-counter button {
+  border: none;
+  padding: 1px 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-input-counter input {
+  font-family: 'Montserrat';
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  width: 70px;
+  padding: 8px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-bottom: 1px solid rgb(157, 157, 157);
+  font-size: 20px;
+  text-align: center;
+  margin: 0 5px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-input-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hero-input-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.hero-input-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.hero-input-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.hero-input-slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 1.25px;
+  bottom: 1px;
+  transition: 0.4s;
+  border-radius: 50%;
+  background-color: var(--dark-color);
+}
+
+.hero-input-switch input:checked + .hero-input-slider:before {
+  transform: translateX(30px);
+}
+
+#toggle-text {
+  font-weight: 600;
+}
+
+.Hero-Book-Now-btn{
+  padding: 15px 30px;
+  font-size: 17px;
+  margin-right: 5px;
+  border-radius: 30px;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  background-color: var(--dark-color);
+  color: var(--lightt-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Soft shadow for depth */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: 0.2s;
+}
+
+.Hero-Book-Now-btn:hover{
+  background-color: var(--lightt-color);
+  color: var(--dark-color);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  z-index: 500;
+}
+.Hero-Resort-names-Logo{
+  display: flex;
+  align-items: center;
+}
+.ResortName-logo{
+  font-family: 'Quicksand', sans-serif;
+    color: #fff5dc;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+.hero-phone-number-span{
+  font-size: 2.5rem;
+}
+
+.Logo-Img-HEro{
+  height: 70px;
+}
+
+.menuicon-wrapper{
+  position: fixed;
+  top: 30px;
+  right: 20px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  z-index: 1000;
+}
+
+.hero-phone-number a{
+  text-decoration: none;
+  color: white;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 100 !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow effect */
+
+  z-index: -1;
+}
+.hero-phone-number-span{
+  transition: 0.2s;
+}
+.hero-phone-number-span:hover{
+  transform: scale(1.5) !important;
+}
+
+.menuicon{
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 1000;
+  background-color: var(--dark-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+
+  z-index: 1001;
+}
+
+.Hero-Hamburger-logo-hamburger {
+  cursor: pointer;
+}
+
+.Hero-Hamburger-logo-hamburger input {
+  display: none;
+}
+
+.Hero-Hamburger-logo-hamburger svg {
+  height: 3em;
+  margin-top: 5px;
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.Hero-Hamburger-logo-line {
+  fill: none;
+  stroke: var(--lightt-color);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1;
+  /* Define the transition for transforming the Stroke */
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+              stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.Hero-Hamburger-logo-line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.Hero-Hamburger-logo-hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.Hero-Hamburger-logo-hamburger input:checked + svg .Hero-Hamburger-logo-line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+
+
+.hamburger-icon {
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.5s ease;
+}
+
+.hamburger-icon .bar {
+  width: 100%;
+  height: 6px;
+  background-color: #000;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+.close-icon {
+  position: fixed;
+  top: 28px;
+  right: 20px;
+  height: 60px;
+  z-index: 1000;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.menu {
+  position: fixed;
+  top: 30px;
+  right: -1000px; /* Initially off the screen to the right */
+  /* background: rgba(156, 156, 156, 0.1);  */
+  display: flex; /* Flexbox for layout */
+  flex-direction: row; /* Arrange items in a row */
+  z-index: 500;
+  background-color: var(--dark-color);
+  opacity: 0; 
+  transition: opacity 0.3s ease, right 0.5s ease;
+  backdrop-filter: blur(10px); 
+  border-radius: 40px; 
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1); 
+  /* border: 1px solid rgba(255, 255, 255, 0.3);  */
+}
+
+.menu.open {
+  top: 30px;
+  right: 80px; /* Slide the menu back into view */
+  opacity: 1; /* Fully visible */
+  z-index: 1001;
+}
+
+.menu ul {
+  list-style-type: none;
+  display: flex;
+  width: fit-content;
+  padding: 0 30px;
+  flex-direction: row;
+  gap: 20px;
+
+  z-index: 1001;
+}
+
+.menu ul li {
+  margin: 13px 0;
+}
+
+.menu ul li a {
+color: var(--lightt-color);
+font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transform: translateX(-100%); /* Start off-screen */
+  animation: slideIn 0.5s ease forwards; /* Slide in */
+}
+
+.menu ul li:nth-child(1) a {
+  animation-delay: 0.1s; /* Delay for first item */
+}
+
+.menu ul li:nth-child(2) a {
+  animation-delay: 0.2s; /* Delay for second item */
+}
+
+.menu ul li:nth-child(3) a {
+  animation-delay: 0.3s; /* Delay for third item */
+}
+
+.menu ul li a:hover {
+  color: var(--lightt-color);
+}
+
+
+.hero-enqire-section {
+  position: fixed; 
+  bottom: 0;
+  right: 20px;
+  z-index: 500; 
+}
+
+
+.hero-enquiry-logo {
+  width: 70px;
+  height: 70px;
+  background-color: var(--lightt-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 0.5px solid var(--dark-color);
+}
+.Enquire-logo{
+  height: 40px;
+}
+.hero-enqire-section-wrapper {
+  position: fixed; 
+  bottom: 120px;
+  right: 68px;
+  margin-bottom: 20px; 
+  z-index: 500; 
+  display: inline-block;
+}
+.enquire-text {
+  font-family: 'Poppins';
+  font-size: 50px;
+  font-weight: 600;
+  position: absolute;
+  top: -33px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px; /* Adjust font size as needed */
+  color: var(--lightt-color); /* Adjust text color as needed */
+  /* visibility: hidden; */
+  opacity: 1;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.hero-enquire-logo-animate {
+  animation: jump 1.2s ease-in-out infinite;
+  padding: 13px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  75% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.hero-enquiry-sub1, .hero-enquiry-sub2, .hero-enquiry-sub3 {
+  position: absolute;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hero-enquiry-sub1 {
+  display: inline-block;
+  color: white;
+  font-size: 18px; /* Slightly reduce the font size for a cleaner look */
+  font-weight: 600; /* Make the font bold but not too heavy */
+
+  border-radius: 50%; /* Smoother border radius for modern look */
+  position: absolute;
+  bottom: 20px; /* Adjust bottom positioning */
+  right: 160px; /* Adjust right positioning */
+  z-index: 1;
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+  cursor: pointer; /* Pointer cursor to indicate it's clickable */
+}
+
+
+.hero-enquiry-sub2 {
+  bottom: 21px;
+  right: 100px;
+  border-radius:50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.show {
+  opacity: 1;
+  transform: scale(1);
+}
+.hero-enquiry-telephone{
+  height: 50px;
+}
+.hero-enquiry-whatsapp{
+  height: 50px;
+}
+
+.advertiseSection {
+  position: absolute;
+  bottom:5px;
+  left:5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.Other-Resorts-container {
+  height: 10vw;
+  width: 18vw;
+  position: relative;
+}
+.hero-card__content {
+  border-radius: 10px;
+  overflow-x: hidden;
+}
+.Hero-Resort-name{
+font-size: 1.1vw;
+color: white;
+margin: 0;
+font-family: 'Quicksand', sans-serif;
+background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+padding: 0 0.5vw;
+}
+.Hero-Slider-logos
+{
+height: 2.2vw;
+}
+.Hero-location-section{
+margin: 0;
+  font-size: 1.2vw;
+  color: white;
+  padding-bottom: 1.5%;
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  padding: 0 0.5vw;
+}
+.Hero-resorts-finalSlide{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+font-family: 'Quicksand', sans-serif;
+color: white;
+}
+.Hero-resorts-rashi-img{
+height: 5vw;
+margin-top: 8%;
+padding-bottom: 5%;
+}
+.Hero-resorts-text{
+font-size: 1vw;
+}
+.Hero-Rashi-Eco-Tourism-text{
+font-size: 1.5vw;
+}
+.Hero-resort-name-extender-1{
+  width: 11vw;
+  margin-left: -0.5vw;
+}
+.Hero-resort-name-extender-2{
+  width: 9vw;
+}
+.hero-card__data{    
+  width: 100%;
+  height: 10vw;  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.Hero-heading-section{
+padding-top: 1%;
+gap: 5% ;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@-webkit-keyframes honeycomb {
+  0%,
+  20%,
+  80%,
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  30%,
+  70% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes honeycomb {
+  0%,
+  20%,
+  80%,
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  30%,
+  70% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@media(max-width:1550px){
+  .Hero-Center-Content-H1{
+    font-size: 3rem;
+    /* width: 700px; */
+  }
+  .Hero-Center-Content-p{
+    font-size: 1.5rem;
+  }
+  .hero-input-container label {
+    font-size: 15px;
+  }
+  .hero-input-date,
+  .hero-input-people,
+  .hero-input-toggle {
+    padding: 5px 20px;
+  }
+  .hero-input-date input,.hero-input-counter input {
+    font-size: 13px;
+  }
+  .hero-input-counter input {
+    padding: 10px;
+  }
+  .hero-input-switch {
+    width: 50px;
+    height: 30px;
+  }
+  .hero-input-switch input:checked + .hero-input-slider:before {
+    transform: translateX(21px);
+  }
+  .menuicon{
+    height: 45px;
+    width: 45px;
+  }
+  .menu ul li {
+    margin: 12px 0;
+  }
+  .ResortName-logo{
+    font-size: 2.2rem;
+  }
+  .hero-phone-number-span{
+    font-size: 2.2rem;
+  }
+  .Logo-Img-HEro{
+    height: 60px;
+  }
+  .hero-enquiry-logo {
+    width: 60px;
+    height: 60px;
+  }
+  .Enquire-logo{
+    height: 35px;
+  }
+  .hero-enquiry-sub1 {
+    bottom: 20px;
+    right: 130px;
+  }
+  .hero-enquiry-sub2 {
+    bottom: 20px;
+  right: 85px;
+  }
+  .hero-enquiry-telephone{
+    height: 40px;
+  }
+  .hero-enquiry-whatsapp{
+    height: 40px;
+  }
+}
+@media(max-width:1350px){
+  .Hero-Center-Content-H1{
+    font-size: 2.2rem;
+    /* width: 550px; */
+  }
+  .Hero-Center-Content-p{
+    font-size: 1rem;
+  }
+  .hero-input-container label {
+    font-size: 13px;
+  }
+  .hero-input-date,
+  .hero-input-people,
+  .hero-input-toggle {
+    padding: 2px 25px;
+  }
+  .hero-input-date input,.hero-input-counter input {
+    font-size: 12px;
+  }
+  .hero-input-counter input {
+    padding: 10px;
+  }
+  .hero-input-switch {
+    width: 50px;
+    height: 25px;
+  }
+  .hero-input-slider:before {
+    height: 20px;
+    width: 20px;
+    left: 1;
+  }
+  .hero-input-switch input:checked + .hero-input-slider:before {
+    transform: translateX(25px);
+  }
+  .menuicon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+  }
+  .menu ul li {
+    margin: 9px 0;
+  }
+  .Hero-Hamburger-logo-hamburger{
+    margin-top: 0px;
+  }
+  .Hero-Hamburger-logo-hamburger svg {
+    /* The size of the SVG defines the overall size */
+    height: 2em;
+  }
+  .ResortName-logo{
+    font-size: 1.8rem;
+  }
+  .hero-phone-number-span{
+    font-size: 1.8rem;
+  }
+  .Logo-Img-HEro{
+    height: 50px;
+  }
+  .hero-enquiry-logo {
+    width: 40px;
+    height: 40px;
+  }
+  .Enquire-logo{
+    height: 20px;
+  }
+
+  .hero-enquiry-sub1 {
+    bottom: 15px;
+    right: 110px;
+  }
+  .hero-enquiry-sub2 {
+    bottom: 15px;
+  right: 65px;
+  }
+  .hero-enquiry-telephone{
+    height: 35px;
+  }
+  .hero-enquiry-whatsapp{
+    height: 35px;
+  }
+}
+
+@media(max-width:1132px){
+  /* .hero-input-container{
+    padding: 10px 1px;
+    gap: 10px;
+  } */
+
+  .hero-input-date,
+  .hero-input-people,
+  .hero-input-toggle{
+    padding: 5px 20px;
+  }
+  .hero-input-container label{
+    margin-right: 10px;
+    font-size: 15px;
+  }
+  .hero-input-date input{
+    padding: 5px;
+    width: 150px;
+  }
+  .hero-input-counter button{
+    padding: 2px 8px;
+    font-size: 20px;
+  }
+  .hero-input-counter input{
+    width: 50px;
+    padding: 5px;
+    font-size: 15px;
+  }
+  .hero-input-switch {
+    width: 40px;
+    height: 25px;
+  }
+  .hero-input-slider:before{
+    height: 20px;
+    width: 20px;
+  }
+  .hero-input-switch input:checked + .hero-input-slider:before {
+    transform: translateX(14px);
+  }
+  .menuicon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+  }
+  .menu ul li {
+    margin: 10px 0;
+  }
+  .menu ul li a {
+    font-size: 0.8rem;
+  }
+  .Hero-Hamburger-logo-hamburger{
+    margin-top:-2px;
+  }
+  .ResortName-logo{
+    font-size: 1.6rem;
+  }
+  .hero-phone-number-span{
+    font-size: 1.6rem;
+  }
+  .Logo-Img-HEro{
+    height: 45px;
+  }
+  .hero-enquiry-logo {
+    width: 35px;
+    height: 35px;
+  }
+  .Enquire-logo{
+    height: 18px;
+  }
+
+  .hero-enquiry-sub1 {
+    bottom: 15px;
+    right: 90px;
+  }
+  .hero-enquiry-sub2 {
+    bottom: 15px;
+  right: 55px;
+  }
+  .hero-enquiry-telephone{
+    height: 30px;
+  }
+  .hero-enquiry-whatsapp{
+    height: 30px;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait){
+  .Hero-resort-name-extender-1{
+    width: 24vw;
+  }
+  .Hero-resort-name-extender-2{
+    width: 19vw;
+  }
+  .Hero-Center-Content-H1 {
+    font-size: 4rem;
+  }
+
+  .hero-card__data{
+    height: 20vw;
+  }
+  .Other-Resorts-container{
+    width: 35vw;
+    height: 20vw;
+  }
+
+  .Hero-Center-Content-p {
+    font-size: 2rem;
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+  .Hero-slider .Hero-buttons {
+    top: 55%;
+  }
+  .Hero-slider .Hero-buttons button {
+    width: 20px;
+    height: 20px;
+  }
+  .menuicon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+  }
+  .menu ul li {
+    margin: 15px 0;
+  }
+  .menu ul li a {
+    font-size: 0.8rem;
+  }
+  .Hero-Hamburger-logo-hamburger{
+    margin-top:-2px;
+  }
+  .ResortName-logo{
+    font-size: 2rem;
+  }
+  .hero-phone-number-span{
+    font-size: 2rem;
+  }
+  .Logo-Img-HEro{
+    height: 70px;
+  }
+  .hero-enquiry-logo {
+    width: 60px;
+    height: 60px;
+  }
+  .Enquire-logo{
+    height: 35px;
+  }
+
+  .hero-enquiry-sub1 {
+    right: 140px;
+    bottom: 20px;
+  }
+  .hero-enquiry-sub2 {
+    right: 90px;
+    bottom: 21px;
+  }
+  .Hero-Resort-name{
+    font-size: 2.5vw;
+  }
+  .Hero-Slider-logos
+  {
+    height: 4vw;
+  }
+  .Hero-location-section{
+    font-size: 2.5vw;
+  }
+  .Hero-resorts-text{
+    font-size: 2vw;
+    }
+    .Hero-Rashi-Eco-Tourism-text{
+    font-size: 2.5vw;
+    
+    }
+    .Hero-resorts-rashi-img{
+      height: 10vw;
+    }
+    .menuicon{
+      width: 60px;
+      height: 60px;
+    }
+    .menu.open{
+      right: 90px;
+    }
+    .menu ul {
+      padding: 0 40px;
+    }
+    .menu ul li {
+      margin: 20px 0;
+    }
+    .menu ul li a {
+      font-size: 1.2rem;
+    }
+    .Hero-Hamburger-logo-hamburger svg {
+      height: 4vw;
+    }
+    .hero-enquiry-telephone{
+      height: 40px;
+    }
+    .hero-enquiry-whatsapp{
+      height: 40px;
+    }
+    .cookie-consent {
+      bottom: 200px;
+      width: 50vw;
+    }
+    .cookie-consent-p{
+      font-size: 2vw;
+    }
+    .cookie-button {
+      font-size: 2vw;
+    }
+}
+@media(max-width:851px) {
+  .hero-input-container{
+    padding: 10px 1px;
+    gap: 5px;
+  }
+  .hero-input-people{
+    padding: 7px;
+  }
+  .hero-input-people{
+    border: none;
+  }
+  .hero-input-toggle{
+    padding: 8px;
+  }
+
+}
+@media (max-width: 972px) and (orientation: portrait){
+  .hero-input-container{
+    border-radius: 10vw;
+  }
+  .Hero-Center-Content-H1 {
+    font-size: 3rem;
+  }
+
+  .Hero-Center-Content-p {
+    font-size: 1.5rem;
+  }
+
+  .hamburger-icon{
+    right: 20px;
+  }
+  .hamburger {
+    top: 30px;
+    right: 30px;
+    height: 65px;
+    width: 65px;
+  }
+
+  .hamburger .bar {
+    width: 50px;
+    height: 5px;
+  }
+
+  .logo {
+    top: 30px;
+    left: 30px;
+    width: 100px;
+  }
+  .menu {
+    top: -300px; 
+    right: 20px; 
+    flex-direction: column; 
+    align-items: center; 
+    border-radius: 10px;
+    transition: top 0.5s ease, opacity 0.5s ease; 
+}
+
+.menu.open {
+    right: 20px;
+    top: 90px; 
+}
+.menuicon{
+  height: 50px;
+  width: 50px;
+}
+.Hero-Hamburger-logo-hamburger svg {
+  height: 3em;
+}
+.menu ul {
+    flex-direction: column; 
+    gap: 15px; 
+}
+
+.menu ul li {
+    margin: 10px 0; 
+}
+
+.menu ul li a {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+    text-align: center; /* Center align text */
+}
+
+}
+@media(max-width:589px){
+  .ResortName-logo{
+    font-size: 5.5vw;
+  }
+  .hero-phone-number-span{
+    font-size: 5.5vw;
+  }
+  .logo{
+    width: 17%;
+  }
+  .Hero-Center-Content-H1{
+    font-size: 2.7rem;
+  }
+  .Hero-Center-Content-p{
+    font-size: 1rem;
+  }
+  .Hero-Book-Now-btn{
+    padding: 10px 20px;
+  }
+  .Hero-Center-Content-p {
+    display: none;
+  }
+}
+
+@media(max-width:510px){
+  .logo{
+    width: 20%;
+  }
+}
+
+@media(max-width:488px){
+  .hero-input-container{
+        border-radius: 42px;
+        padding-bottom: 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+  }
+}
+
+@media(max-width:549px){
+
+  .hero-input-people{
+    border: none;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .Hero-Center-Content-H1 {
+    margin-top: 100px;
+    font-size: 2.5rem;
+  }
+  .logo{
+    top: 20px;
+    left:  22.5px;
+  }
+  .menuicon-wrapper{
+    top: 20px;
+  }
+  .menuicon{
+    height: 45px;
+    width: 45px;
+  }
+  .Hero-Hamburger-logo-hamburger svg {
+    height: 2.5rem;
+  }
+  .hero-input-people{
+    display: none;
+  }
+
+  .advertiseSection{
+    display: none;
+  }
+  .menu {
+    z-index: 9999;
+      width: 100%;
+      margin: 0;
+      right: 0;
+      border-radius: 0;
+      background-color: rgba(15, 12, 12, 0.599);
+      opacity: 100px;
+      transition: none;
+  }
+  .menu.open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    right: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    background-color: rgba(15, 12, 12, 0.599);
+    opacity: 10px;
+      top: 0;
+  }
+
+  .menu ul {
+    text-align: center;
+      flex-direction: column; 
+      gap: 10px; 
+  }
+  .hero-input-switch {
+    width: 45px;
+    height:26px;
+    }
+  .hero-input-switch input:checked + .hero-input-slider:before {
+    transform: translateX(19px);
+  }
+
+  .menu ul li {
+      margin: 10px 0; 
+  }
+
+  .menu ul li a {
+      font-size: 1.2rem; 
+      text-align: center; 
+  }
+
+  .hero-enqire-section{
+    margin-bottom: 0px;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .menu-icon-inside{
+    height: 30px;
+  }
+    .hero-enqire-section {
+    bottom: -10px;
+    right: 10px;
+  }
+  .Enquire-logo{
+    height: 30px;
+  }
+  .hero-enquiry-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .hero-enquiry-sub2 {
+    right: 70px;
+    bottom: 20px;
+  }
+  .hero-enquiry-sub1 {
+    right: 120px;
+    bottom: 19px;
+  }
+  .alternating-logo{
+    margin-top: 70px;
+  }
+  .hero-enquiry-telephone{
+    height: 40px;
+  }
+  .hero-enquiry-whatsapp{
+    height: 40px;
+  }
+  .hero-input-container label {
+  font-size: 4vw;
+  }
+  .Toggle-text-span{
+    font-size: 4vw;
+  }
+
+  .cookie-consent {
+    padding: 20px 10px;
+    bottom: 10px;
+    flex-direction: column;
+    left: 5px;
+    width: 80vw;
+    /* right: 20vw; */
+    transform: translateX(0%);
+    align-items: start;
+border-radius: 10px;
+gap: 10px;
+  }
+  .cookie-consent-p{
+    font-size: 4vw;
+    white-space: normal; 
+    text-align: left;
+  }
+  .Cookie-buttons-placer{
+    gap: 2vw;
+  }
+  .cookie-button {
+    padding: 3vw 6vw;
+
+    font-size: 3.5vw;
+  }
+
+}
+
+@media(max-width:400px){
+  .logo{
+    width: 24%;
+  }
+}
+
+@media(max-width:350px){
+  .logo{
+    width: 26%;
+  }
+}
+
+/* Common transition for the elements */
+.ResortName-logo,
+.alternating-logo {
+/* margin-left: 73%; */
+position: absolute;
+opacity: 0; /* Initially hidden */
+transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out; /* Added scale transition */
+transform: scale(0.95); /* Slightly scaled down initially */
+}
+
+/* Make sure the text is visible initially */
+.ResortName-logo {
+opacity: 1; /* Show text */
+transform: scale(1); /* Normal scale for text */
+}
+
+/* Initially hide the image */
+.alternating-logo {
+display: none; /* Hidden at the start */
+transform: scale(0.95); /* Slightly scaled down */
+}
+
+/* Optionally, add a hover effect or any additional styles to improve the visuals */
+.ResortName-logo:hover,
+.alternating-logo:hover {
+transform: scale(1.05); /* Slight scale-up effect on hover */
+}
+#Hero-slideContainer {
+  width: 720px;
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Hero-sliderBtn {
+  margin-top: 10px;
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  color: white;
+  padding: 1rem;
+  top: calc(50% - 1rem - 27px);
+  z-index: 999;
+  font-family: Nunito;
+  font-weight: 600;
+  font-size: 1.5rem;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s;
+}
+
+.Hero-sliderBtn:hover {
+  background-color: var(--lightt-color);
+  color: #333;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#Hero-prev {
+  left: 0;
+}
+
+#Hero-next {
+  right: 0;
+}
+
+.Hero-slide {
+  display: none;
+}
+
+.Hero-show {
+  display: block;
+  animation: Hero-fadein 0.3s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes Hero-fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.Hero-slide p {
+  padding: 1rem 0;
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-family: Nunito;
+  font-weight: 600;
+}
+
+.AdvertiseIMg {
+  max-width: 100%;
+  border-radius: 0.4rem 0.4rem 0 0;
+  display: block;
+  margin: auto;
+}
+
+@media screen and (max-width: 722px) {
+  #slideContainer {
+    width: 100%;
+  }
+  .sliderBtn {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  .slide p {
+    padding: 0.5rem 0;
+  }
+}
+
+@media(max-width:945px){
+  .logo{
+    position: absolute;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 932px)and (max-height:600px) and (orientation: landscape){
+  .Logo-Img-HEro{
+    height: 70px;
+  }
+  .Hero-resorts-rashi-img{
+    margin-top: 16%;
+  }
+  .advertiseSection{
+    left: 0;
+    bottom: 0;
+  }
+  
+  .Other-Resorts-container{
+    border-radius: 5px;
+    width: 22vw;
+    height: 12vw;
+  }
+  .hero-card__data{
+    height: 12vw;
+  }
+  .Hero-slider .Hero-buttons button {
+    height: 2vw;
+    width: 2vw;
+  }
+  .Hero-slider .Hero-buttons {
+    top: 50%;
+  }
+  .Hero-container{
+    height: 120vh;
+  }
+  .Hero-Center-Content-H1{
+    font-size: 4.5vw;
+  }
+  .Hero-Center-Content-p{
+    font-size: 1.5vw;
+    margin-bottom: 1px;
+  }
+
+  .hero-input-container label {
+    font-size: 1.5vw;
+    margin-right: 10px;
+  }
+  .hero-input-date input {
+  width: 100px;
+  }
+  .Toggle-text-span{
+    font-size: 1vw;
+  }
+  /* .hero-input-counter input {
+    padding: 5px 5px;
+    font-size: 10px;
+  } */
+  .hero-input-switch {
+  width: 40px;
+  height:21px;
+  }
+  .hero-input-slider:before {
+    height: 15px;
+    width: 15px;
+    bottom: 1;
+    left: 0;
+  }
+  .hero-input-switch input:checked + .hero-input-slider:before {
+    transform: translateX(20px);
+  }
+  /* .Hero-Book-Now-btn{
+    padding: 10px 20px;
+    font-size: 13px;
+    margin-bottom: 50px;
+  } */
+  .logo {
+   top: 15px;
+   left: 15px;
+  }
+  .ResortName-logo{
+    font-size: 25px;
+  }
+  .hero-phone-number-span{
+    font-size: 25px;
+  }
+  .menuicon-wrapper{
+    top: 15px;
+    right: 15px;
+  }
+  .menuicon{
+      height:5vw;
+      width: 5vw;
+  }
+  .menu{
+    top: 15px;
+  }
+  .menu.open{
+    right: 70px;
+    top: 15px;
+  }
+
+  .menu ul li {
+    margin: 15px -2px;
+  }
+  .menu ul li a {
+    font-size: 12px;  
+  }
+  .hero-enqire-section{
+    margin-bottom: 0px;
+    right: 10px;
+    bottom: 10px;
+  }
+    .hero-enqire-section {
+    bottom: -10px;
+    right: 10px;
+  }
+  .Enquire-logo{
+    height: 30px;
+  }
+  .hero-enquiry-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .hero-enquiry-sub2 {
+    right: 75px;
+    bottom: 20px;
+  }
+  .hero-enquiry-sub1 {
+    right: 125px;
+    bottom: 19px;
+  }
+  .hero-enquiry-telephone{
+    height: 4.5vw;
+  }
+  .hero-enquiry-whatsapp{
+    height: 4.5vw;
+  }
+  .Hero-Book-Now-btn{
+    padding: 1.5vw 3vw;
+    font-size: 1.5vw;
+  }
+  .Toggle-text-span{
+    font-size: 1.5vw;
+  }
+  .hero-input-container{
+    padding: 0.5vw 0vw;
+  }
+}
+@media(max-width:380px)
+{
+  .Hero-container{
+    height: 100vh;
+  }
+  .Hero-Book-Now-btn{
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+  .Hero-Center-Content-H1{
+    font-size: 25px;
+  }
+  .Hero-Center-Content-p{
+    font-size: 13px;
+  }
+}
+@media (min-width: 1950px) {
+  .ResortName-logo{
+    font-size: 3rem;
+  }
+  .hero-phone-number-spanr{
+    font-size: 3rem;
+  }
+  .Hero-Book-Now-btn {
+    padding: 1.03vw 2.56vw;
+  }
+
+  .menuicon {
+    height: 3vw;
+    width: 3vw;
+  }
+  .Hero-Hamburger-logo-hamburger svg {
+    /* The size of the SVG defines the overall size */
+    height: 2.5vw;
+  }
+  .menu-icon-inside {
+    height: 2.56vw;
+  }
+  .menu.open {
+    right: 5vw;
+  }
+  .menu ul {
+    gap: 1.54vw;
+    padding: 0 2.56vw;
+  }
+  .menu ul li {
+    margin: 1.03vw 0;
+  }
+  .menu ul li a {
+    font-size: 1vw;
+  }
+  .Logo-Img-HEro {
+    height: 5.13vw;
+  }
+  .Hero-Center-Content-H1 {
+    font-size: 3vw;
+  }
+  .Hero-Center-Content-p {
+    font-size: 1.5vw;
+  }
+  /* .hero-input-container {
+    padding: 0.51vw 2.56vw;
+  } */
+  .hero-input-container label {
+    font-size: 1.1vw;
+  }
+  .hero-input-date,
+  .hero-input-people,
+  .hero-input-toggle {
+    padding: 0.03vw 1.54vw;
+  }
+  .hero-input-date input {
+    font-size: 1.03vw;
+    padding: 20px;
+    width: fit-content;
+  }
+  .hero-input-counter button {
+    font-size: 1.54vw;
+    padding: 0.1vh 0.5vw;
+  }
+  .hero-input-counter input {
+    font-size: 1.03vw;
+    padding: 0.51vw;
+  }
+  .hero-input-switch {
+    width: 70px;
+    height: 40px;
+  }
+  .hero-input-slider:before {
+    height: 33px;
+    width: 33px; 
+  }
+  .Hero-Book-Now-btn {
+    padding: 1.03vw 2.56vw;
+    font-size: 1.03vw;
+    border-radius: 4vw;
+  }
+  .Toggle-text-span {
+    font-size: 1.13vw;
+  }
+  .hero-enquiry-logo {
+    height: 3.5vw;
+    width: 3.5vw;
+  }
+  .Enquire-logo{
+    height: 2vw;
+  }
+.hero-enquiry-sub1 {
+  right:8vw;
+}
+.hero-enquiry-sub2 { 
+  right: 5vw;
+ }
+ .hero-enquiry-telephone{
+  height:2.5vw;
+}
+.hero-enquiry-whatsapp{
+  height: 2.5vw;
+}
+  }
+
+@media(min-width:481px){
+    .Other-resorts-section{
+        display: none;
+    }
+}
+
+
+//popup
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: none; /* hidden initially */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Show popup */
+.popup-overlay.active {
+  display: flex; /* center with flex */
+}
+
+/* Popup box - bigger size */
+.popup-box {
+  background: #fff;
+  color: #333;
+  max-width: 600px; /* bigger width */
+  width: 90%;
+  padding: 40px 35px; /* more padding */
+  border-radius: 25px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+  font-family: 'Poiret One', cursive;
+  animation: popupFade 0.4s ease;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 36px;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.2s;
+}
+.close-btn:hover { color: #555; }
+
+/* Heading */
+.popup-box h2 {
+  font-size: 42px; /* bigger heading */
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* Sub-text */
+.sub-text {
+  font-size: 24px;
+  color: #555;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* Highlight text */
+.highlight {
+  font-size: 28px;
+  font-weight: bold;
+  color: #e67e22;
+  margin-bottom: 40px;
+}
+
+/* Book button */
+.btn-book {
+  display: inline-block;
+  background: #e67e22;
+  color: #fff;
+  padding: 20px 60px; /* bigger button */
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+  transition: background 0.3s, transform 0.2s;
+}
+.btn-book:hover {
+  background: #cf711f;
+  transform: translateY(-2px);
+}
+
+/* Animation */
+@keyframes popupFade {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .popup-box { width: 85%; padding: 35px 25px; }
+  .popup-box h2 { font-size: 36px; }
+  .sub-text { font-size: 20px; }
+  .highlight { font-size: 24px; }
+  .btn-book { padding: 18px 50px; font-size: 20px; }
+  .close-btn { font-size: 30px; top: 15px; right: 15px; }
+}
+
+
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 14px;
+  text-align: center;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 24px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.popup-box h2 {
+  margin-bottom: 10px;
+}
+
+.sub-text {
+  color: #555;
+  line-height: 1.5;
+}
+
+.highlight {
+  margin: 15px 0;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.popup-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-offer {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn-offer.dayout {
+  background: #ff9800;
+}
+
+.btn-offer.room {
+  background: #3f51b5;
+}
+
+.btn-offer:hover {
+  opacity: 0.9;
+}
+.coupon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+  padding: 8px 14px;
+  border: 2px dashed #2e7d32;
+  border-radius: 6px;
+}
+
+#couponCode {
+  font-size: 16px;
+  font-weight: 400; /* 👈 normal font */
+  letter-spacing: 1px;
+  color: #2e7d32;
+}
+
+.copy-icon {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.copy-msg {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 10px;
+}
+#offer-popup {
+  display: none;
+}

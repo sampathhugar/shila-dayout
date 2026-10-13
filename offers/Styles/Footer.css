@@ -1,0 +1,212 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove default link styles in Footer */
+.Footer a {
+  color: inherit; /* Inherit the color from parent, which is white in this case */
+  text-decoration: none; /* Remove underline */
+}
+
+.Footer a:hover {
+  color: #e0e0e0; /* Optional: change color on hover */
+  text-decoration: underline; /* Optional: add underline on hover */
+}
+
+
+/* Footer Styles */
+.Footer {
+  background-color: var(--dark-color);
+  color: #FFFFFF;
+  padding: 20px 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.Footer-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  justify-content: space-evenly;
+  
+}
+
+.Footer-logo-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.Footer-logo-subsection{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+
+.Footer-logo {
+  height: 60px;
+}
+
+.Footer-iso-logo {
+  height: 90px;
+  margin-top: 30px;
+}
+
+.Footer-title {
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.Footer-address,
+.Footer-phone,
+.Footer-office-hours {
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 1.6;
+}
+
+.Footer-address-section,
+.Footer-reservation-section,
+.Footer-social-section{
+  padding-top: 0.5%;
+  }
+
+.Footer-email {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.Footer-email:hover {
+  text-decoration: underline;
+}
+
+.Footer-social-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 30px);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.Footer-social-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.social-icons-size{
+  width: 30px;
+  height: 30px; 
+  transition: 0.2s;
+}
+.social-icons-size:hover{
+  width: 32px;
+  height: 32px;
+  transition: 0.2s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .Footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .Footer-logo-section,
+  .Footer-address-section,
+  .Footer-reservation-section,
+  .Footer-social-section {
+    flex: none;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .Footer-social-icons{
+      align-items: center;
+      justify-content: center;
+  }
+}
+
+.Footer-container-below {
+background-color: var(--lightt-color);
+color: var(--dark-color);
+display: flex;
+flex-direction: column;
+align-items: center;
+font-family: "Poppins", sans-serif;
+gap: 5px;
+height: auto;
+padding-top: 12px;
+padding-bottom: 12px;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+.tloomy-text{
+  text-decoration: none;
+  color: var(--dark-color);
+}
+
+.tloomy-text:hover{
+  color: white;
+}
+
+.Footer-text-below {
+font-size: 0.85rem;
+text-align: center;
+margin: 0;
+}
+
+.Footer-link-below {
+font-size: 0.85rem;
+color: white;
+text-decoration: none;
+}
+
+.Footer-link-below:hover {
+text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+.Footer-container-below {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Footer-text-below,
+.Footer-link-below {
+    font-size: 1rem;
+}
+}
+
+@media(min-width:1950px){
+  .Footer-title{
+    font-size: 1.2vw;
+  }
+
+  .Footer-address,
+.Footer-phone,
+.Footer-office-hours,
+.Footer-email {
+  font-size: 0.8vw;
+}
+
+.social-icons-size{
+  height: 1.2vw;
+  width: 1.2vw;
+}
+.social-icons-size:hover{
+  height: 1.3vw;
+  width: 1.3vw;
+}
+}

@@ -1,0 +1,471 @@
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../Font/Quicksand/Quicksand-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* .Facilities-Container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 5%;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 85vh;
+    margin-top: 7%;
+  } */
+  .Facilities-Container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 5%;
+    border-bottom-left-radius: 2vw;
+    border-top-left-radius: 2vw;
+    font-family: Arial, sans-serif;
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image within the container */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 45vw;
+    margin-top: 5%;
+    position: relative; /* Required for the pseudo-element positioning */
+    z-index: 1; /* Ensure the content remains above the overlay */
+  }
+
+  .Facilities-heading-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-bottom: -2.5%;
+    margin-top: 6.5%;
+  }
+  
+  .Facilities-Container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    border-bottom-left-radius: 2vw;
+    border-top-left-radius: 2vw;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: -1; /* Places the overlay behind the content */
+  }
+  .Facilities-Outer-Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+    
+  .Facilities-Container-left {
+    /* width: 40vw; */
+    /* background-color: #f5f5f5; */
+    display: flex;
+    /* flex: 0.5; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    padding: 2vw;
+  }
+  
+  .Facilities-Container-box {
+    height: 9vw;
+    width: 15vw;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.5vw;
+    position: relative; /* To position the pseudo-element correctly */
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image within the container */
+    background-repeat: no-repeat;  
+    color: white;
+    font-family: 'Poiret One', sans-serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Adds subtle shadow */
+    overflow: hidden; /* Ensures pseudo-elements stay within the box */
+  }
+  
+  .Facilities-Container-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2); /* Black filter with 50% opacity */
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+    z-index: 1; /* Ensures the filter stays above the background */
+  }
+  
+.Facilities-Container-box .Facilities-Container-box-content {
+  position: relative; /* Ensures it stays above the pseudo-element */
+  z-index: 2; /* Places it above the black filter */
+  color: white; /* Ensures the text color remains white */
+  /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+.Facilities-Container-box:hover {
+  background-color: #eaeaea;
+    transform: scale(1.05);
+}
+
+.Facilities-Container-box.active {
+  background-color: var(--dark-color);
+  transform: scale(1.05);
+  font-weight: 700;
+}
+
+.Facilities-Container-box.active::before {
+  opacity: 0; /* Removes the black filter when active */
+}
+
+
+.Facilities-Container-right {
+    /* width: 60vw; */
+    /* flex: 1.2; */
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease;
+    padding-bottom: 5vw;
+  }
+  
+  .Facilities-Container-content {
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    color: #ffffff;
+    padding: 2vw;
+    width: fit-content;
+    border-radius: 1vw;
+    text-align: left;
+    font-family: 'Poppins';
+    max-width: 50vw;
+}
+
+#Facilities-Container-heading {
+  font-family: 'Poiret One', sans-serif;
+  font-size: 2.5vw;
+  margin-bottom: 1vw;
+  font-weight: 200;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Adds subtle shadow */
+  filter: brightness(2.5); /* Increase brightness */
+  color: #ffffff; /* Ensure text remains visible with higher brightness */
+}
+
+#Facilities-Container-description {
+  font-family: 'Quicksand';
+  font-size: 1.5vw;
+  font-weight: 200;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Adds subtle shadow */
+  filter: brightness(2.5); /* Increase brightness */
+  color: #ffffff; /* Ensure text remains visible with higher brightness */
+  }
+
+  .facility-action-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    margin-top:15px;
+  }
+
+
+  .facilities-button-highlighter{
+    border: 1px solid var(--lightt-color);
+    background-color: var(--lightt-color);
+    animation: none;
+  }
+  .facilities-button-highlighter:hover{
+    border: 1px solid var(--lightt-color);
+    background-color: var(--dark-color);
+  }
+  .learnmore-button-highlighter::before,
+  .facilities-button-highlighter::before{
+    content: '';
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 0%;
+  height: 0%;
+  background: none;
+  animation: none;
+  z-index: 0;
+  text-decoration: none;
+  }
+  .learnmore-button-highlighter{
+    border: 1px solid var(--lightt-color);
+    background: rgba(255, 255, 255, 0.1); /* Subtle transparent white */
+}
+  .learnmore-button-highlighter:hover{
+    border: 1px solid var(--lightt-color);
+    background-color: var(--dark-color);
+  }
+  
+  @media(max-width:1200px){
+    .Facilities-Container-content {
+      max-width: 500px;
+    }
+  }
+  @media (max-width: 1024px) and (orientation: portrait){
+    
+    .Facilities-Container-box {
+      /* height: 15vw;
+      width: 25vw; */
+      font-size: 1.75vw;
+    }
+    #Facilities-Container-heading {
+      font-size: 5vw;
+    }
+    #Facilities-Container-description {
+      font-size: 2.25vw;
+    }
+    .Facilities-Container-content {
+      max-width: 600px;
+      margin-left: 3%;
+    }
+  }
+  @media(max-width:720px){
+    /* .Facilities-Container{
+      } */
+      .Facilities-Container{
+        height: 70vh;
+        flex-direction: column-reverse;
+      }
+      .Facilities-Container {
+        border-bottom-left-radius: 0vw;
+        border-top-left-radius: 0vw;
+      }
+      .Facilities-Container::before{
+        border-bottom-left-radius: 0vw;
+        border-top-left-radius: 0vw;
+
+      }
+      .Facilities-Container-box.active {
+        transform: scale(1.01);
+      }
+      .Facilities-Container-left{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2vw;
+        margin-left: none;
+        justify-content: center;
+      }
+      .Facilities-Container-right {
+      justify-content: start;
+    }
+    .Facilities-Container-box {
+      height: 27vw;
+      width: 45vw;
+      font-size: 4vw;
+    }
+
+    #Facilities-Container-heading {
+      font-size: 7.5vw;
+      font-weight: 600;
+    }
+    #Facilities-Container-description {
+      font-size: 4vw;
+      font-weight: 400;
+    }
+    .Facilities-Container-content{
+      border-radius: 2vw;
+      max-width: none;
+      padding-left: 5%;
+      padding-right: 10%;
+    }
+    .Facilities-Container-box:hover {
+      transform: none;
+    }
+    .Facilities-Outer-Container{
+      flex-direction: column-reverse;
+    }
+  }
+
+  @media screen and (max-width: 1024px) and (orientation: landscape) {
+    .Facilities-Container{
+      /* height: 110vh; */
+    }
+    #Facilities-Container-heading {
+      font-size: 3.5vw;
+      font-weight: 600;
+    }
+    #Facilities-Container-description {
+      font-size: 2vw;
+      font-weight: 400;
+    }
+  }
+
+
+
+  .facilities-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.facilities-popup {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 900px;
+    width: 90%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 80vw;
+    height: 65vh;
+    overflow-y: scroll;
+    font-family: 'Poppins', sans-serif;
+
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+}
+
+/* Specific styles for Spa content */
+.facilities-popup.popup-spa {
+  height: fit-content; /* Adjust height for Spa */
+}
+
+/* Specific styles for Conference content */
+.facilities-popup.popup-conference {
+  height: fit-content; /* Adjust height for Conference */
+}
+
+/* Specific styles for Wedding content */
+.facilities-popup.popup-wedding {
+  height: fit-content; /* Adjust height for Wedding */
+}
+
+.spa-responsive-table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+  margin-top: 3%;
+}
+
+.spa-responsive-table th{
+  background-color: #dcc084;
+}
+
+.spa-responsive-table tr:nth-child(even){
+  background-color: #f0e3c4;
+}
+
+.spa-responsive-table th,
+.spa-responsive-table td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media(max-width:1024px) {
+  .facilities-popup{
+    height: 50vh;
+  }
+}
+
+@media(max-width:768px) {
+  .facilities-popup,
+  .facilities-popup.popup-spa,
+  .facilities-popup.popup-conference,
+  .facilities-popup.popup-wedding {
+      padding: 5vw;
+  }
+}
+
+@media(max-width:500px){
+  .facilities-popup{
+    overflow-x: hidden;
+  }
+  .spa-responsive-table{
+    margin-top: 7%;
+    width: 120%;
+    margin-left: -10%;
+  }
+  .spa-responsive-table th,
+.spa-responsive-table td{
+  font-size: 0.8rem;
+}
+}
+
+@media(max-width:480px) {
+  .facilities-popup.popup-spa,
+  .facilities-popup.popup-conference,
+  .facilities-popup.popup-wedding {
+      height: 50vh;
+
+      padding-left: 10vw;
+      padding-right: 10vw;
+  }
+}
+
+
+.facilities-popup::-webkit-scrollbar {
+  width: 0.5vw; /* 2% of the viewport width */
+  height: 0.5vw; /* 2% of the viewport width for horizontal scrollbar */
+}
+
+.facilities-popup::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.facilities-popup::-webkit-scrollbar-track {
+  background: #c2c2c2;
+  border-radius: 10px;
+}
+
+.facilities-popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.facilities-popup-content h2 {
+  font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.facilities-popup-content p {
+    font-weight: 400;
+    color: #414040;
+    line-height: 1.6;
+    font-size:large;
+}
+
+@media(max-width:480px){
+  .facilities-popup{
+    width: 90vw;
+    height: 60vh;
+    padding-left: 11vw;
+    padding-right: 11vw;
+    padding-top: 7vw;
+    padding-bottom: 7vw;
+    font-size:large;
+  }
+  .facilities-popup-content p{
+    font-size: larger;
+  }
+}

@@ -1,0 +1,1719 @@
+/* ==========================================================================
+   SHILHAANDARA DAY OUT LANDING PAGE STYLESHEET
+   Mobile-Optimized & Highlighted Coupon Styling
+   ========================================================================== */
+
+:root {
+  --shil-gold: #B8A884;
+  --shil-gold-light: #d8cbb0;
+  --shil-gold-hover: #a3936f;
+  --shil-gold-bright: #D6A73A;
+  --shil-gold-accent: #edd706;
+  --shil-charcoal: #303646;
+  --shil-charcoal-dark: #1e222d;
+  --shil-charcoal-light: #3f475a;
+  --shil-brown: #5e4431;
+  --shil-crimson: #5e0613;
+  --shil-cream: #faf7f2;
+  --shil-cream-card: #f5efe6;
+  --shil-text-dark: #2c2b2b;
+  --shil-text-muted: #6b665c;
+  --shil-text-subtle: #8a8375;
+  --shil-border: #e2dbce;
+  --shil-card-shadow: 0 10px 30px rgba(48, 54, 70, 0.08);
+  --shil-card-hover-shadow: 0 18px 40px rgba(48, 54, 70, 0.16);
+  --shil-radius-sm: 8px;
+  --shil-radius-md: 14px;
+  --shil-radius-lg: 20px;
+  --shil-radius-pill: 50px;
+  --shil-font-head: 'Montserrat', sans-serif;
+  --shil-font-body: 'Poppins', sans-serif;
+}
+
+/* Reset & Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body.dayout-body {
+  font-family: var(--shil-font-body);
+  background-color: #fdfbf7;
+  color: var(--shil-text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 80px; /* Space for mobile sticky CTA bar */
+}
+
+@media (min-width: 769px) {
+  body.dayout-body {
+    padding-bottom: 0;
+  }
+}
+
+/* Typography Helpers */
+.dayout-title-lg {
+  font-family: var(--shil-font-head);
+  font-size: clamp(1.8rem, 3.8vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--shil-charcoal);
+}
+
+.dayout-title-md {
+  font-family: var(--shil-font-head);
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--shil-charcoal);
+}
+
+.dayout-title-sm {
+  font-family: var(--shil-font-head);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--shil-charcoal);
+}
+
+.dayout-subtitle {
+  font-size: clamp(0.9rem, 1.4vw, 1.15rem);
+  color: var(--shil-text-muted);
+}
+
+.dayout-section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--shil-gold-bright);
+  background: rgba(214, 167, 58, 0.12);
+  padding: 5px 14px;
+  border-radius: var(--shil-radius-pill);
+  margin-bottom: 10px;
+}
+
+.dayout-section-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 2.5rem auto;
+  padding: 0 12px;
+}
+
+.dayout-section-header .divider {
+  width: 50px;
+  height: 3px;
+  background: var(--shil-gold);
+  margin: 12px auto 0 auto;
+  border-radius: 2px;
+}
+
+.dayout-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 480px) {
+  .dayout-container {
+    padding: 0 14px;
+  }
+}
+
+/* ==========================================================================
+   INFINITE TICKER LOOP (Auto-Scrolling Loop)
+   ========================================================================== */
+.dayout-top-ticker-wrapper {
+  background: linear-gradient(90deg, #181b24 0%, #292f3d 50%, #181b24 100%);
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  z-index: 1001;
+  border-bottom: 1px solid rgba(214, 167, 58, 0.4);
+  height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.dayout-ticker-track {
+  display: flex;
+  width: max-content;
+  animation: tickerLoop 30s linear infinite;
+  align-items: center;
+}
+
+.dayout-ticker-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes tickerLoop {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.dayout-ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 28px;
+  font-size: 0.86rem;
+  white-space: nowrap;
+}
+
+.dayout-ticker-badge {
+  background: var(--shil-gold-bright);
+  color: #000;
+  font-weight: 700;
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: var(--shil-radius-pill);
+  text-transform: uppercase;
+}
+
+.dayout-ticker-badge.weekend {
+  background: #ff7675;
+  color: #fff;
+}
+
+.dayout-ticker-dot {
+  width: 5px;
+  height: 5px;
+  background: var(--shil-gold-bright);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* ==========================================================================
+   HIGHLIGHTED COUPON CODE PILL (With Copy Button & Glow)
+   ========================================================================== */
+.dayout-coupon-pill-highlighted {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #fffdf8 0%, #fef3d6 100%);
+  border: 2px dashed #D6A73A;
+  box-shadow: 0 2px 14px rgba(214, 167, 58, 0.35);
+  border-radius: var(--shil-radius-pill);
+  padding: 4px 6px 4px 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  user-select: none;
+  position: relative;
+}
+
+.dayout-coupon-pill-highlighted:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(214, 167, 58, 0.55);
+  border-color: #B8941F;
+}
+
+.dayout-coupon-pill-highlighted:active {
+  transform: scale(0.97);
+}
+
+.coupon-code-text {
+  font-family: var(--shil-font-head);
+  font-weight: 800;
+  font-size: 0.96rem;
+  letter-spacing: 1.5px;
+  color: #1e222d;
+  text-transform: uppercase;
+}
+
+.coupon-copy-btn {
+  background: linear-gradient(135deg, #D6A73A 0%, #B8941F 100%);
+  color: #000;
+  border: none;
+  border-radius: var(--shil-radius-pill);
+  padding: 5px 12px;
+  font-size: 0.75rem;
+  font-family: var(--shil-font-body);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.coupon-copy-btn:hover {
+  background: #f0c363;
+  color: #000;
+}
+
+.dayout-coupon-pill-highlighted.copied {
+  border-color: #27ae60;
+  background: #eafaf1;
+  box-shadow: 0 2px 14px rgba(39, 174, 96, 0.35);
+}
+
+.dayout-coupon-pill-highlighted.copied .coupon-copy-btn {
+  background: #27ae60;
+  color: #fff;
+}
+
+/* Compact version for Ticker */
+.dayout-ticker-coupon-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1.5px dashed #D6A73A;
+  border-radius: var(--shil-radius-pill);
+  padding: 2px 8px 2px 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dayout-ticker-coupon-pill:hover {
+  background: rgba(214, 167, 58, 0.3);
+}
+
+.dayout-ticker-coupon-text {
+  font-family: var(--shil-font-head);
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  color: #ffd875;
+}
+
+.dayout-ticker-copy-btn {
+  background: #D6A73A;
+  color: #000;
+  border: none;
+  border-radius: var(--shil-radius-pill);
+  padding: 1px 7px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.dayout-ticker-coupon-pill.copied {
+  border-color: #27ae60;
+  background: rgba(39, 174, 96, 0.25);
+}
+
+.dayout-ticker-coupon-pill.copied .dayout-ticker-copy-btn {
+  background: #27ae60;
+  color: #fff;
+}
+
+/* ==========================================================================
+   CLEAN MINIMAL HEADER
+   ========================================================================== */
+.dayout-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.dayout-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.dayout-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.dayout-logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.dayout-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.dayout-brand-title {
+  font-family: var(--shil-font-head);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--shil-charcoal);
+  letter-spacing: 0.5px;
+}
+
+.dayout-brand-sub {
+  font-size: 0.68rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--shil-gold-hover);
+  font-weight: 600;
+}
+
+.dayout-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dayout-phone-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--shil-charcoal);
+  padding: 8px 14px;
+  border-radius: var(--shil-radius-sm);
+  background: rgba(48, 54, 70, 0.05);
+  transition: all 0.2s ease;
+}
+
+.dayout-phone-btn:hover {
+  color: var(--shil-gold-bright);
+  background: rgba(214, 167, 58, 0.12);
+}
+
+.dayout-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #D6A73A 0%, #B8941F 100%);
+  color: #000;
+  font-family: var(--shil-font-head);
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 11px 22px;
+  border-radius: var(--shil-radius-pill);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(214, 167, 58, 0.35);
+}
+
+.dayout-cta-btn:hover {
+  background: linear-gradient(135deg, #f0c363 0%, #d6a73a 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(214, 167, 58, 0.5);
+}
+
+/* ==========================================================================
+   HERO SECTION & PROPERTY CAROUSEL
+   ========================================================================== */
+.dayout-hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0 70px 0;
+  overflow: hidden;
+  color: #fff;
+}
+
+.dayout-hero-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.dayout-hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  transform: scale(1.04);
+}
+
+.dayout-hero-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1.2s ease-in-out, transform 8s ease-out;
+}
+
+.dayout-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(20, 24, 33, 0.65) 0%, rgba(20, 24, 33, 0.85) 100%);
+  z-index: 2;
+}
+
+.dayout-hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.dayout-hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(214, 167, 58, 0.6);
+  backdrop-filter: blur(8px);
+  padding: 6px 16px;
+  border-radius: var(--shil-radius-pill);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #f7e3b2;
+  margin-bottom: 18px;
+}
+
+.dayout-hero-pill-badge {
+  background: var(--shil-gold-bright);
+  color: #000;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: var(--shil-radius-pill);
+  font-size: 0.7rem;
+}
+
+.dayout-hero-title {
+  font-family: var(--shil-font-head);
+  font-size: clamp(2rem, 4.2vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 12px;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+}
+
+.dayout-hero-title span {
+  background: linear-gradient(135deg, #fce09c 0%, #D6A73A 50%, #f0c363 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.dayout-hero-desc {
+  font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+  color: #ececec;
+  max-width: 720px;
+  margin: 0 auto 24px auto;
+  line-height: 1.5;
+}
+
+.dayout-hero-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 4;
+}
+
+.dayout-hero-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dayout-hero-dot.active {
+  background: var(--shil-gold-bright);
+  width: 24px;
+  border-radius: 8px;
+}
+
+/* ==========================================================================
+   QUICK BOOKING WIDGET (Mobile Touch-Optimized)
+   ========================================================================== */
+.dayout-booking-card {
+  background: #ffffff;
+  border-radius: var(--shil-radius-lg);
+  padding: 20px 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(214, 167, 58, 0.3);
+  text-align: left;
+  color: var(--shil-text-dark);
+  position: relative;
+  z-index: 5;
+}
+
+.dayout-booking-form {
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 1fr 1.2fr;
+  gap: 14px;
+  align-items: flex-end;
+}
+
+.dayout-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dayout-form-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--shil-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dayout-input-wrapper {
+  background: #f8f6f0;
+  border: 1.5px solid var(--shil-border);
+  border-radius: var(--shil-radius-sm);
+  padding: 9px 12px;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.dayout-input-wrapper:focus-within {
+  border-color: var(--shil-gold-bright);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(214, 167, 58, 0.18);
+}
+
+.dayout-input-field {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-family: var(--shil-font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--shil-charcoal);
+  outline: none;
+}
+
+.dayout-guest-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.dayout-step-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--shil-border);
+  background: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--shil-charcoal);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.dayout-step-btn:hover {
+  background: var(--shil-gold-bright);
+  color: #000;
+  border-color: transparent;
+}
+
+.dayout-guest-value {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--shil-charcoal);
+}
+
+.dayout-submit-btn {
+  background: linear-gradient(135deg, #D6A73A 0%, #B8941F 100%);
+  color: #000;
+  font-family: var(--shil-font-head);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: var(--shil-radius-sm);
+  padding: 12px 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  width: 100%;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(214, 167, 58, 0.35);
+}
+
+.dayout-submit-btn:hover {
+  background: linear-gradient(135deg, #f0c363 0%, #d6a73a 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(214, 167, 58, 0.5);
+}
+
+.dayout-submit-btn:active {
+  transform: scale(0.98);
+}
+
+.dayout-booking-note {
+  font-size: 0.76rem;
+  color: var(--shil-text-subtle);
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* ==========================================================================
+   OFFERS BANNER (Mobile-Friendly & Highlighting Coupon)
+   ========================================================================== */
+.dayout-offers-section {
+  padding: 30px 0;
+  background: #fff;
+  border-bottom: 1px solid var(--shil-border);
+}
+
+.dayout-price-alert-banner {
+  background: linear-gradient(135deg, #fff9ee 0%, #fef3dc 100%);
+  border: 1.5px solid rgba(214, 167, 58, 0.45);
+  border-radius: var(--shil-radius-md);
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.dayout-alert-content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.dayout-alert-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.dayout-price-alert-text {
+  font-size: 0.9rem;
+  color: var(--shil-charcoal);
+  line-height: 1.5;
+}
+
+.dayout-price-alert-text strong {
+  color: #946c00;
+}
+
+.dayout-alert-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   PACKAGES SECTION (Mobile-Friendly Slot Buttons)
+   ========================================================================== */
+.dayout-packages-section {
+  padding: 70px 0;
+  background: #fdfbf7;
+}
+
+.dayout-toggle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.dayout-toggle-pill {
+  display: inline-flex;
+  background: #ece7dc;
+  padding: 4px;
+  border-radius: var(--shil-radius-pill);
+  max-width: 100%;
+}
+
+.dayout-toggle-option {
+  padding: 10px 20px;
+  border-radius: var(--shil-radius-pill);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: var(--shil-text-muted);
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dayout-toggle-option.active {
+  background: var(--shil-charcoal);
+  color: #fff;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dayout-toggle-discount-chip {
+  background: #d63031;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 10px;
+}
+
+.dayout-toggle-discount-chip.weekend {
+  background: #e17055;
+}
+
+.dayout-slot-notice-pill {
+  background: rgba(48, 54, 70, 0.08);
+  color: var(--shil-charcoal);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: var(--shil-radius-pill);
+  border: 1px dashed var(--shil-gold);
+  text-align: center;
+}
+
+.dayout-package-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+  align-items: stretch;
+}
+
+.dayout-package-card {
+  background: #ffffff;
+  border-radius: var(--shil-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shil-card-shadow);
+  border: 1px solid var(--shil-border);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.dayout-package-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shil-card-hover-shadow);
+  border-color: var(--shil-gold);
+}
+
+.dayout-package-card.featured {
+  border: 2px solid var(--shil-gold-bright);
+  box-shadow: 0 16px 40px rgba(214, 167, 58, 0.2);
+}
+
+.dayout-package-featured-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #D6A73A 0%, #B8941F 100%);
+  color: #000;
+  font-weight: 800;
+  font-size: 0.72rem;
+  padding: 4px 12px;
+  border-radius: var(--shil-radius-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  z-index: 4;
+}
+
+.dayout-card-media {
+  position: relative;
+  height: 190px;
+  overflow: hidden;
+}
+
+.dayout-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.dayout-package-card:hover .dayout-card-img {
+  transform: scale(1.05);
+}
+
+.dayout-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 18px 10px 18px;
+  background: linear-gradient(0deg, rgba(20, 24, 33, 0.9) 0%, rgba(20, 24, 33, 0) 100%);
+  color: #fff;
+}
+
+.dayout-package-name {
+  font-family: var(--shil-font-head);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.dayout-package-tagline {
+  font-size: 0.82rem;
+  color: #e3d9c7;
+}
+
+.dayout-card-body {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dayout-slot-selector-title {
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--shil-text-muted);
+  margin-bottom: 8px;
+}
+
+/* Touch-Friendly Slot Buttons */
+.dayout-card-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+
+.dayout-slot-btn {
+  background: #fbf9f4;
+  border: 1.5px solid var(--shil-border);
+  border-radius: var(--shil-radius-sm);
+  padding: 9px 12px;
+  font-size: 0.82rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--shil-charcoal);
+  text-align: left;
+  min-height: 44px;
+}
+
+.dayout-slot-btn:active {
+  transform: scale(0.98);
+}
+
+.dayout-slot-btn.active {
+  background: #303646;
+  color: #fff;
+  border-color: #303646;
+  box-shadow: 0 2px 8px rgba(48, 54, 70, 0.2);
+}
+
+.dayout-slot-btn .slot-price-badge {
+  font-weight: 700;
+  color: #b8860b;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.dayout-slot-btn.active .slot-price-badge {
+  color: #f7d583;
+}
+
+.dayout-price-box {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.dayout-price-currency {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--shil-charcoal);
+}
+
+.dayout-price-amount {
+  font-family: var(--shil-font-head);
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--shil-charcoal);
+  line-height: 1;
+}
+
+.dayout-price-period {
+  font-size: 0.8rem;
+  color: var(--shil-text-muted);
+}
+
+.dayout-price-kids {
+  font-size: 0.82rem;
+  color: var(--shil-text-muted);
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--shil-border);
+}
+
+.dayout-inclusions-list {
+  list-style: none;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.dayout-inclusion-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 0.86rem;
+  color: var(--shil-text-dark);
+  margin-bottom: 7px;
+}
+
+.dayout-inclusion-item.highlight {
+  font-weight: 700;
+  color: #0b6623;
+}
+
+.dayout-inclusion-icon {
+  color: var(--shil-gold-bright);
+  font-size: 0.92rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.dayout-card-cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: auto;
+}
+
+.dayout-book-btn {
+  width: 100%;
+  background: linear-gradient(135deg, var(--shil-charcoal) 0%, var(--shil-charcoal-dark) 100%);
+  color: #fff;
+  border: 1px solid var(--shil-gold);
+  border-radius: var(--shil-radius-sm);
+  padding: 12px;
+  font-family: var(--shil-font-head);
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  min-height: 46px;
+}
+
+.dayout-package-card.featured .dayout-book-btn {
+  background: linear-gradient(135deg, #D6A73A 0%, #B8941F 100%);
+  color: #000;
+  border: none;
+}
+
+.dayout-book-btn:hover {
+  background: linear-gradient(135deg, #f0c363 0%, #d6a73a 100%);
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(214, 167, 58, 0.4);
+}
+
+.dayout-book-btn:active {
+  transform: scale(0.98);
+}
+
+.dayout-details-btn {
+  width: 100%;
+  background: transparent;
+  color: var(--shil-text-muted);
+  border: 1px solid var(--shil-border);
+  border-radius: var(--shil-radius-sm);
+  padding: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+/* ==========================================================================
+   COUPON REDEMPTION TABLE
+   ========================================================================== */
+.dayout-coupon-breakdown {
+  margin-top: 40px;
+  background: #fff;
+  border-radius: var(--shil-radius-md);
+  padding: 24px;
+  border: 1px solid var(--shil-border);
+  box-shadow: var(--shil-card-shadow);
+}
+
+.dayout-table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.dayout-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  min-width: 500px;
+}
+
+.dayout-table th {
+  background: var(--shil-charcoal);
+  color: #fff;
+  text-align: left;
+  padding: 10px 14px;
+  font-family: var(--shil-font-head);
+  font-weight: 600;
+}
+
+.dayout-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #ebe5d9;
+}
+
+.dayout-table tr:nth-child(even) td {
+  background: #fbf9f4;
+}
+
+.dayout-coupon-chip {
+  background: var(--shil-gold-bright);
+  color: #000;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: var(--shil-radius-pill);
+  font-size: 0.78rem;
+  display: inline-block;
+}
+
+/* ==========================================================================
+   ACTIVITIES SHOWCASE
+   ========================================================================== */
+.dayout-activities-section {
+  padding: 70px 0;
+  background: #ffffff;
+}
+
+.dayout-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.dayout-filter-btn {
+  background: #f1ede3;
+  color: var(--shil-charcoal);
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--shil-radius-pill);
+  font-family: var(--shil-font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dayout-filter-btn:hover {
+  background: var(--shil-gold-light);
+}
+
+.dayout-filter-btn.active {
+  background: var(--shil-charcoal);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(48, 54, 70, 0.2);
+}
+
+.dayout-activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.dayout-activity-card {
+  background: #fdfbf7;
+  border-radius: var(--shil-radius-md);
+  overflow: hidden;
+  border: 1px solid var(--shil-border);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.dayout-activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--shil-gold);
+}
+
+.dayout-activity-media {
+  position: relative;
+  height: 175px;
+  overflow: hidden;
+}
+
+.dayout-activity-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.dayout-activity-card:hover .dayout-activity-img {
+  transform: scale(1.06);
+}
+
+.dayout-activity-icon-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 38px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.dayout-activity-icon-badge img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.dayout-activity-tag {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(20, 24, 33, 0.85);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: var(--shil-radius-pill);
+}
+
+.dayout-activity-tag.free {
+  background: #27ae60;
+}
+
+.dayout-activity-info {
+  padding: 14px 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dayout-activity-title {
+  font-family: var(--shil-font-head);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--shil-charcoal);
+  margin-bottom: 5px;
+}
+
+.dayout-activity-desc {
+  font-size: 0.8rem;
+  color: var(--shil-text-muted);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   RESORT HIGHLIGHTS
+   ========================================================================== */
+.dayout-highlights-section {
+  padding: 70px 0;
+  background: #fdfbf7;
+}
+
+.dayout-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.dayout-feature-card {
+  background: #ffffff;
+  padding: 24px 20px;
+  border-radius: var(--shil-radius-md);
+  border: 1px solid var(--shil-border);
+  box-shadow: var(--shil-card-shadow);
+  text-align: center;
+}
+
+.dayout-feature-img {
+  width: 100%;
+  height: 155px;
+  object-fit: cover;
+  border-radius: var(--shil-radius-sm);
+  margin-bottom: 14px;
+}
+
+.dayout-feature-title {
+  font-family: var(--shil-font-head);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--shil-charcoal);
+  margin-bottom: 6px;
+}
+
+.dayout-feature-desc {
+  font-size: 0.86rem;
+  color: var(--shil-text-muted);
+}
+
+/* ==========================================================================
+   GALLERY
+   ========================================================================== */
+.dayout-gallery-section {
+  padding: 70px 0;
+  background: #ffffff;
+}
+
+.dayout-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.dayout-gallery-item {
+  position: relative;
+  height: 220px;
+  border-radius: var(--shil-radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.dayout-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   FAQ
+   ========================================================================== */
+.dayout-faq-section {
+  padding: 70px 0;
+  background: #fdfbf7;
+}
+
+.dayout-faq-grid {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dayout-faq-item {
+  background: #ffffff;
+  border: 1px solid var(--shil-border);
+  border-radius: var(--shil-radius-md);
+  overflow: hidden;
+}
+
+.dayout-faq-question {
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-family: var(--shil-font-head);
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: var(--shil-charcoal);
+}
+
+.dayout-faq-arrow {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.dayout-faq-item.active .dayout-faq-arrow {
+  transform: rotate(180deg);
+}
+
+.dayout-faq-answer {
+  padding: 0 20px 18px 20px;
+  font-size: 0.88rem;
+  color: var(--shil-text-muted);
+  display: none;
+  line-height: 1.55;
+}
+
+.dayout-faq-item.active .dayout-faq-answer {
+  display: block;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.dayout-footer {
+  background: #1e222d;
+  color: #c9cdd4;
+  padding: 50px 0 24px 0;
+  border-top: 4px solid var(--shil-gold);
+}
+
+.dayout-footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 36px;
+  margin-bottom: 36px;
+}
+
+.dayout-footer-col h4 {
+  font-family: var(--shil-font-head);
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+}
+
+.dayout-footer-col ul {
+  list-style: none;
+}
+
+.dayout-footer-col ul li {
+  margin-bottom: 9px;
+}
+
+.dayout-footer-col ul li a {
+  color: #a4abb8;
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: color 0.2s;
+}
+
+.dayout-footer-col ul li a:hover {
+  color: var(--shil-gold-bright);
+}
+
+.dayout-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #8c93a0;
+}
+
+/* ==========================================================================
+   MOBILE STICKY BOTTOM BAR (Always Thumb-Accessible)
+   ========================================================================== */
+.dayout-mobile-sticky-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  padding: 8px 12px calc(8px + env(safe-area-inset-bottom, 0px)) 12px;
+  box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.18);
+  z-index: 99999;
+  border-top: 1px solid var(--shil-border);
+}
+
+.dayout-mobile-sticky-inner {
+  display: grid;
+  grid-template-columns: 46px 46px 1fr;
+  gap: 8px;
+  align-items: center;
+}
+
+.dayout-mobile-btn-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--shil-border);
+  background: #fdfbf7;
+  color: var(--shil-charcoal);
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: all 0.2s;
+}
+
+.dayout-mobile-btn-icon:active {
+  transform: scale(0.92);
+}
+
+.dayout-mobile-btn-icon.wa {
+  color: #25d366;
+  border-color: #25d366;
+  background: rgba(37, 211, 102, 0.08);
+}
+
+.dayout-mobile-btn-primary {
+  background: linear-gradient(135deg, #D6A73A 0%, #B8941F 100%);
+  color: #000;
+  font-family: var(--shil-font-head);
+  font-weight: 800;
+  font-size: 0.95rem;
+  height: 46px;
+  border-radius: var(--shil-radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(214, 167, 58, 0.45);
+}
+
+.dayout-mobile-btn-primary:active {
+  transform: scale(0.97);
+}
+
+/* ==========================================================================
+   MODAL POPUP
+   ========================================================================== */
+.dayout-modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(20, 24, 33, 0.78);
+  backdrop-filter: blur(6px);
+  z-index: 100000;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.dayout-modal-box {
+  background: #fff;
+  width: 100%;
+  max-width: 650px;
+  max-height: 88vh;
+  border-radius: var(--shil-radius-lg);
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  padding: 26px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.dayout-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #f0ece3;
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--shil-charcoal);
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS OVERRIDES (< 768px and < 480px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .dayout-booking-form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dayout-mobile-sticky-bar {
+    display: block;
+  }
+
+  .dayout-header-inner {
+    height: 64px;
+  }
+
+  .dayout-brand-sub {
+    display: none;
+  }
+
+  .dayout-logo {
+    height: 42px;
+  }
+
+  .dayout-brand-title {
+    font-size: 1.15rem;
+  }
+
+  .dayout-phone-btn {
+    padding: 7px 10px;
+    font-size: 0.82rem;
+  }
+
+  .dayout-header-actions .dayout-cta-btn {
+    display: none; /* Prominent CTA is in sticky bar */
+  }
+
+  .dayout-hero {
+    min-height: auto;
+    padding: 28px 0 46px 0;
+  }
+
+  .dayout-hero-desc {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .dayout-booking-card {
+    padding: 18px 16px;
+    border-radius: 16px;
+  }
+
+  .dayout-booking-form {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .dayout-price-alert-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 16px;
+  }
+
+  .dayout-alert-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .dayout-alert-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .dayout-alert-actions .dayout-cta-btn {
+    width: 100%;
+  }
+
+  .dayout-toggle-pill {
+    width: 100%;
+  }
+
+  .dayout-toggle-option {
+    flex: 1;
+    justify-content: center;
+    padding: 9px 8px;
+    font-size: 0.8rem;
+  }
+
+  .dayout-package-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dayout-activities-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .dayout-activity-media {
+    height: 140px;
+  }
+
+  .dayout-activity-info {
+    padding: 10px 12px;
+  }
+
+  .dayout-activity-title {
+    font-size: 0.95rem;
+  }
+
+  .dayout-activity-desc {
+    font-size: 0.75rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .dayout-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dayout-hero-title {
+    font-size: 1.65rem;
+  }
+
+  .dayout-activities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dayout-activity-media {
+    height: 175px;
+  }
+
+  .dayout-activity-desc {
+    -webkit-line-clamp: 3;
+  }
+
+  .dayout-modal-box {
+    padding: 18px;
+  }
+
+  .dayout-coupon-pill-highlighted {
+    padding: 3px 6px 3px 10px;
+    margin: 6px 0;
+  }
+
+  .coupon-code-text {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+
+  .coupon-copy-btn {
+    padding: 4px 9px;
+    font-size: 0.7rem;
+  }
+}

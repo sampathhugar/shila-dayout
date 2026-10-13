@@ -1,0 +1,108 @@
+.Other-resorts-section{
+    /* margin-top: -15px;
+    margin-bottom: -5%; */
+
+    margin-top: 10%;
+    margin-bottom: 1%;
+
+    max-width: 100%;
+    overflow-x: hidden;
+
+    padding-left: 5%;
+    padding-right: 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.resort-card__content {
+    overflow-x: hidden;
+    margin-inline: 1.75rem;
+  }
+
+.resort-card__data{
+    height: 57vw;
+
+    padding-top: 2vw;
+    padding-bottom: 4vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Resort-heading-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2vw;
+}
+
+.Otherresorts-Resort-name{
+    font-size: 6vw;
+    color: white;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    padding: 0 1.5vw;
+}
+
+.Resort-Slider-width-fixer{
+    width: fit-content;
+}
+
+.Slider-logos{
+    height: 10vw;
+}
+
+.Resort-location-section{
+    margin: 0;
+    font-size: 6vw;
+    color: white;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    padding: 0 1.5vw;
+}
+
+.Other-resorts-finalSlide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+}
+
+.resort-final-card__data{
+    height: 57vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.other-resorts-rashi-img{
+    height: 10vh;
+    padding-bottom: 5%;
+}
+
+.Other-resorts-text{
+    font-size: 5vw;
+}
+
+.Rashi-Eco-Tourism-text{
+    font-size: 7vw;
+}
+
+
+@media(min-width:481px){
+    .Other-resorts-section{
+        display: none;
+    }
+}
